@@ -1,0 +1,19 @@
+/* Visueel verbergen zonder display:none zodat bots het veld nog in de DOM zien.
+     Deze regels zijn specifiek voor .honeypot en raken geen andere classes. */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); /* betere compatibiliteit */
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-field .row {
+  margin-left: 0;
+  margin-right: 0;
+}
