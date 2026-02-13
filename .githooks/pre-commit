@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+MAX_BYTES=1048576
+FAILED=0
+
+while IFS= read -r -d '' path; do
+  size=$(git cat-file -s ":$path" 2>/dev/null || echo 0)
+  if [ "$size" -gt "$MAX_BYTES" ]; then
+    mb=$(awk "BEGIN { printf \"%.2f\", $size/1048576 }")
+    echo "Blocked: staged file exceeds 1.00 MiB -> $path ($mb MiB)"
+    FAILED=1
+  fi
+done < <(git diff --cached --name-only -z --diff-filter=AM)
+
+if [ "$FAILED" -ne 0 ]; then
+  echo ""
+  echo "Commit blocked to keep git history lean."
+  echo "If intentional, reduce/compress file or use: git commit --no-verify"
+  exit 1
+fi
+
+exit 0
