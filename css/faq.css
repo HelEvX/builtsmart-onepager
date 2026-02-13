@@ -1,0 +1,61 @@
+.faq-title {
+  color: var(--text-color-light);
+  font-size: 32px;
+}
+.faq-sec .panel-content {
+  padding-left: 20px;
+}
+.faq-sec .panel {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  background: transparent;
+  color: var(--text-color-light);
+}
+.faq-sec .panel-heading a {
+  margin-bottom: 0px;
+  padding: 14px 20px;
+  border: 1px solid var(--text-color-light);
+  border-radius: 0;
+  margin-bottom: 10px;
+  background: transparent;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0;
+  color: var(--text-color-primary);
+  font-weight: 600;
+  font-size: 20px;
+  background: var(--text-color-light);
+}
+.faq-sec .panel-title a:before {
+  float: right !important;
+  content: "+";
+  color: var(--text-color-subtle);
+  font-weight: bold;
+  font-size: 24px;
+}
+.faq-sec .panel-group .panel-heading.active h4 a::before {
+  float: right !important;
+  content: "−";
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color-subtle);
+}
+.faq-sec .panel-group .panel-heading {
+  border-bottom: 0;
+  padding: 10px 0px;
+}
+.faq-sec .panel-group .panel-heading.active h4 a {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+  color: var(--text-color-primary);
+}
+.faq-sec .panel-heading a:hover {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color-darker);
+  color: var(--text-color-light);
+}
+.faq-sec .panel-title a:hover:before {
+  color: var(--text-color-light);
+}

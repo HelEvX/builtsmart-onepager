@@ -1,0 +1,92 @@
+footer.footer {
+  background: var(--primary-color) none repeat scroll 0 0;
+}
+.footer-sec {
+  padding-top: 100px;
+  position: relative;
+  padding-bottom: 50px;
+}
+.footer-sec h2 {
+  color: var(--text-color-light);
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer-sec p {
+  color: var(--text-color-light);
+}
+.footer-widget-one img {
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+.footer-widget-one i:hover {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  border-color: var(--primary-color);
+  transition: all 0.4s ease-in-out 0s;
+}
+.footer-widget-one ul {
+  margin-top: 15px;
+}
+.footer-widget-one form {
+  background: #525459 none repeat scroll 0 0;
+  margin-top: 35px;
+  position: relative;
+}
+.footer-widget-one input[type="email"] {
+  background: var(--text-color-light) none repeat scroll 0 0;
+  border: 1px solid var(--text-color-light);
+  color: var(--text-color-primary);
+  padding: 10px 58px 10px 10px;
+  width: 100%;
+}
+.footer-widget-one button {
+  background: var(--secondary-color) none repeat scroll 0 0;
+  color: var(--text-color-light);
+  padding: 11px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.footer-widget-one button i {
+  border: none;
+  margin-right: 0;
+  color: var(--text-color-light);
+}
+.footer-widget-menu li:before {
+  content: "›";
+  left: 0px;
+  top: 0px;
+  position: relative;
+  color: var(--text-color-light);
+  padding-right: 10px;
+}
+.footer-widget-menu li {
+  position: relative;
+}
+.footer-widget-menu li a {
+  color: var(--border-color-light);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.footer-widget-menu li a:hover {
+  color: var(--secondary-color);
+  transition: all 0.4s ease 0s;
+}
+.footer-bottom-sec {
+  padding: 15px 0;
+  background: var(--background-color-dark);
+}
+.copy-right {
+  margin-top: 8px;
+}
+.footer-bottom-sec p {
+  color: var(--border-color-light);
+  margin: 0;
+  text-align: left;
+}
+.copy-right span,
+.copy-right span a {
+  color: var(--secondary-color);
+}

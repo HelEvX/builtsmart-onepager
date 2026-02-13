@@ -1,0 +1,144 @@
+:root {
+  /* ------------------------------------------------------------
+     PRIMITIVES
+  ------------------------------------------------------------ */
+
+  --n-0: #ffffff;
+  --n-50: #fafaf9;
+  --n-100: #f5f5f4;
+  --n-200: #e7e5e4;
+  --n-400: #78716c;
+  --n-700: #292524;
+  --n-800: #1c1917;
+  --n-900: #0c0a09;
+
+  --y-300: #f7e84a;
+  --y-400: #f6d365;
+  --y-500: #eab308;
+  --y-600: #d69e07;
+  --y-700: #b9770e;
+  --y-800: #854d0e;
+  --y-900: #713f12;
+
+  --a-500: #d48a07;
+
+  --g-600: #16a34a;
+  --b-700: #0369a1;
+  --r-700: #dc2626;
+
+  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-20: 2rem;
+  --fs-24: 2.4rem;
+
+  --lh-14: 1.55;
+  --lh-16: 1.55;
+  --lh-20: 1.35;
+  --lh-24: 1.25;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --rad-6: 0.6rem;
+  --rad-8: 0.8rem;
+  --rad-12: 1.2rem;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  /* ------------------------------------------------------------
+     SEMANTIC TOKENS
+  ------------------------------------------------------------ */
+
+  --brand-accent: var(--y-500);
+  --brand-accent-hover: var(--y-600);
+  --brand-accent-strong: var(--y-700);
+  --brand-metal-start: var(--y-600);
+  --brand-metal-end: var(--y-400);
+
+  --bg-app: var(--n-50);
+  --bg-surface: var(--n-0);
+  --bg-surface-muted: var(--n-100);
+  --bg-strong: var(--n-800);
+
+  --text: var(--n-800);
+  --text-muted: var(--n-400);
+  --text-inverse: var(--n-0);
+
+  --border: var(--n-200);
+
+  --state-success: var(--g-600);
+  --state-info: var(--b-700);
+  --state-danger: var(--r-700);
+
+  --link: var(--y-800);
+  --link-hover: var(--y-900);
+
+  /* ------------------------------------------------------------
+     UI ROLE TOKENS
+  ------------------------------------------------------------ */
+
+  --ui-page-bg: var(--bg-app);
+  --ui-surface-bg: var(--bg-surface);
+  --ui-surface-muted-bg: var(--bg-surface-muted);
+  --ui-border: 1px solid var(--border);
+
+  --ui-nav-bg: var(--bg-strong);
+  --ui-nav-text: var(--text-inverse);
+  --ui-nav-text-muted: rgba(255, 255, 255, 0.72);
+  --ui-nav-active-bg: rgba(255, 255, 255, 0.08);
+  --ui-nav-active-indicator: var(--brand-accent);
+
+  --ui-topbar-bg: var(--ui-surface-bg);
+  --ui-topbar-text: var(--text);
+
+  --ui-focus-ring: 0 0 0 0.2rem rgba(234, 179, 8, 0.4);
+
+  --ui-btn-font-weight: var(--fw-700);
+  --ui-btn-radius: var(--rad-8);
+  --ui-btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.14), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --ui-btn-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.1);
+  --ui-btn-primary-bg: linear-gradient(
+    102deg,
+    var(--brand-metal-start) 0%,
+    var(--brand-accent) 58%,
+    var(--brand-metal-end) 100%
+  );
+  --ui-btn-primary-bg-hover: linear-gradient(
+    102deg,
+    var(--brand-metal-start) 0%,
+    var(--brand-accent) 58%,
+    var(--brand-metal-end) 100%
+  );
+  --ui-btn-primary-text: #2b1a06;
+  --ui-btn-tracking: 0.012em;
+  --ui-btn-line-height: 1.2;
+
+  --ui-btn-secondary-bg: var(--n-800);
+  --ui-btn-secondary-bg-hover: var(--n-700);
+  --ui-btn-secondary-text: var(--n-50);
+  --ui-btn-secondary-border: var(--n-800);
+
+  --ui-input-bg: var(--bg-surface);
+  --ui-input-text: var(--text);
+  --ui-input-border: 1px solid var(--border);
+  --ui-input-focus-ring: var(--ui-focus-ring);
+
+  --ui-font-body: var(--font-sans);
+  --ui-fs-body: var(--fs-14);
+  --ui-lh-body: var(--lh-14);
+  --ui-fw-body: var(--fw-400);
+
+  --ui-fs-title: var(--fs-20);
+  --ui-lh-title: var(--lh-20);
+  --ui-fw-title: var(--fw-600);
+
+  --ui-radius-sm: var(--rad-6);
+  --ui-radius-md: var(--rad-8);
+  --ui-radius-lg: var(--rad-12);
+
+  --ui-shadow-1: var(--shadow-1);
+}

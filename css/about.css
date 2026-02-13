@@ -1,0 +1,52 @@
+.about-us-sec {
+  background: var(--primary-color);
+}
+.about-desc {
+  color: var(--text-color-light);
+}
+.about-desc h1 {
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 30px;
+  color: var(--text-color-light);
+}
+.about-desc h1 span {
+  color: var(--secondary-color);
+}
+.about-desc a {
+  background: var(--secondary-color);
+  padding: 12px 26px;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--text-color-light);
+  position: relative;
+}
+.about-desc a:before {
+  content: "→";
+  float: right;
+  top: 0px;
+  position: relative;
+  color: var(--text-color-light);
+  padding-left: 10px;
+  transition: all 0.4s ease 0s;
+}
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+  }
+}
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+  }
+}
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+  }
+}

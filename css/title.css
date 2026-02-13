@@ -1,0 +1,30 @@
+.sec-title {
+  max-width: 900px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.sec-title h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-family: var(--font-primary);
+}
+.sec-title span {
+  font-weight: normal;
+}
+.border-shape {
+  background: var(--primary-color);
+  display: block;
+  height: 2px;
+  left: 0;
+  margin: 20px 0;
+  position: relative;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 120px;
+}
+.sec-title p {
+  margin-bottom: 20px;
+}

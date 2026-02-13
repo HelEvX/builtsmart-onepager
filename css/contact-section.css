@@ -1,0 +1,97 @@
+.contact-info-icon {
+  float: left;
+  text-align: center;
+}
+.contact-page-sec .contact-field h2 {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-field .col-md-6.col-sm-6.col-xs-12 {
+  padding-left: 0;
+}
+.contact-info-icon i {
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+.contact-info-text {
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+.contact-info-text h2 {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+.contact-field .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.contact-info-text span {
+  color: var(--text-color-subtle);
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+}
+.contact-field input {
+  background: var(--text-color-light) none repeat scroll 0 0;
+  border: 1px solid var(--background-color-tertiary);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  color: var(--text-color-subtle);
+}
+.contact-field select {
+  width: 100%;
+  border: 1px solid var(--background-color-tertiary);
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  color: var(--text-color-subtle);
+}
+.contact-field .message-input {
+  display: inline-block;
+  width: 100%;
+  padding-left: 0;
+}
+.single-input-field textarea {
+  border: 1px solid var(--background-color-tertiary);
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+}
+.single-input-fieldsbtn input[type="submit"] {
+  background: var(--secondary-color) none repeat scroll 0 0;
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color-primary);
+  display: inline-block;
+  font-weight: 600;
+  padding: 14px 0;
+  width: 150px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.single-input-fieldsbtn input[type="submit"]:hover {
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  transition: all 0.4s ease-in-out 0s;
+  border-color: var(--primary-color);
+}
+.contact-field {
+  display: inline-block;
+  width: 100%;
+}
+.single-input-field h4 {
+  color: var(--text-color-primary);
+  font-size: 14px;
+}
+.single-input-field {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+}
+.contact-page-map {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 70px;
+}

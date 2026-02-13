@@ -1,6 +1,30 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
+const normalizePath = (path) => {
+  const clean = path.replace(/\/+$/, "") || "/";
+  return clean === "/index.html" ? "/" : clean;
+};
+
+const loadPartials = async () => {
+  const partialNodes = document.querySelectorAll("[data-include]");
+  const tasks = [...partialNodes].map(async (node) => {
+    const includePath = node.getAttribute("data-include");
+    if (!includePath) return;
+
+    try {
+      const response = await fetch(includePath, { cache: "no-store" });
+      if (!response.ok) return;
+      const html = await response.text();
+      node.outerHTML = html;
+    } catch (_) {
+      return;
+    }
+  });
+
+  await Promise.all(tasks);
+};
+
+const initMobileMenu = () => {
   const mainMenus = document.querySelectorAll("#main-menu");
 
   mainMenus.forEach((menu) => {
@@ -24,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
         : '<i class="ri-menu-line" aria-hidden="true"></i>';
     });
   });
+};
 
+const initFaqHeadingState = () => {
   if (window.jQuery) {
     window
       .jQuery(".panel-collapse")
@@ -36,16 +62,37 @@ document.addEventListener("DOMContentLoaded", () => {
         window.jQuery(this).closest(".panel").find(".panel-heading").removeClass("active");
       });
   }
+};
 
-  const scrollLinks = document.querySelectorAll("a[data-scroll-nav]");
-  scrollLinks.forEach((link) => {
+const initSmoothScroll = () => {
+  const currentPath = normalizePath(window.location.pathname);
+
+  const hashLinks = document.querySelectorAll("a[href*='#']");
+  hashLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-      const index = link.getAttribute("data-scroll-nav");
-      const target = index ? document.querySelector(`[data-scroll-index='${index}']`) : null;
-      if (!target) return;
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      const targetUrl = new URL(href, window.location.href);
+      const targetPath = normalizePath(targetUrl.pathname);
+      const targetHash = targetUrl.hash;
+      if (!targetHash) return;
+
+      if (targetPath !== currentPath) return;
+
+      const targetElement = document.querySelector(targetHash);
+      if (!targetElement) return;
 
       event.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", targetHash);
     });
   });
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadPartials();
+  initMobileMenu();
+  initFaqHeadingState();
+  initSmoothScroll();
 });

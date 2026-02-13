@@ -1,0 +1,262 @@
+@media only screen and (min-width: 992px) and (max-width: 5000px) {
+  .team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(4n + 1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-menu ul li a {
+    padding: 40px 6px;
+  }
+  .slider-wrapper {
+    width: 100%;
+  }
+  .slider-text h1 {
+    font-size: 48px;
+  }
+  .appointment-button a {
+    padding: 12px 14px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .pt-100 {
+    padding-top: 80px;
+  }
+  .pb-100 {
+    padding-bottom: 80px;
+  }
+  .pb-70 {
+    padding-bottom: 40px;
+  }
+  .logo {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+  .sngl-price {
+    margin-bottom: 30px;
+  }
+  .team-member::after {
+    height: 38%;
+  }
+  .header-left li {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+  }
+  .main-menu ul li a {
+    padding: 34px 4px;
+  }
+  .main-menu {
+    text-align: center;
+  }
+  .slider-text {
+    width: 767px;
+  }
+  .slider-text h1 {
+    font-size: 36px;
+  }
+  .main-menu ul ul {
+    top: 92px;
+  }
+  .sec-title {
+    text-align: center;
+    margin: 0 0px 50px 0px;
+  }
+  .service-item .col-md-4.col-sm-6:nth-child(2n + 1) {
+    clear: both;
+  }
+  .footer-widget-menu {
+    margin-bottom: 30px;
+  }
+  .call-to-action-text h2 {
+    font-size: 24px;
+  }
+  .team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(2n + 1) {
+    clear: both;
+  }
+  .slider-wrapper {
+    width: 100%;
+  }
+  .faq-title {
+    font-size: 28px;
+  }
+  .faq-sec .panel-heading a {
+    font-size: 18px;
+  }
+  .faq-sec .panel-title a::before {
+    font-size: 18px;
+  }
+  .about-desc h1 {
+    font-size: 28px;
+  }
+  .sec-title h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .sec-title h1 {
+    font-size: 24px;
+  }
+  .why-choose-thumb img {
+    width: 100%;
+  }
+  .sngl-price {
+    margin-bottom: 50px;
+  }
+  .slider-wrapper,
+  .slider-caption {
+    width: 100%;
+  }
+  .slider-text {
+    width: 100%;
+  }
+  .pt-100 {
+    padding-top: 80px;
+  }
+  .pb-100 {
+    padding-top: 80px;
+  }
+  .pb-70 {
+    padding-top: 40px;
+  }
+  .appointment-button {
+    display: none;
+  }
+  .slider-text p {
+    width: 100%;
+  }
+  .header-left {
+    text-align: center;
+  }
+  .about-desc h1 {
+    font-size: 32px;
+  }
+  .slider-text {
+    padding: 0 30px;
+  }
+  .hd-sec {
+    padding-top: 24px;
+    position: relative;
+  }
+  .logo {
+    text-align: left;
+    padding: 0;
+    position: relative;
+    z-index: 99;
+  }
+  .slider-text h1 {
+    font-size: 34px;
+  }
+  .team-member::after {
+    height: 38%;
+  }
+  .slider-text li a {
+    margin-bottom: 20px;
+  }
+  .pagehding-sec {
+    padding: 80px 0;
+  }
+  .page-heading h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .sec-title {
+    text-align: center;
+    margin: 0 0px 50px 0px;
+  }
+  .footer-sec .col-md-3.col-sm-6 {
+    margin: 40px 0;
+  }
+  .footer-bottom-sec p {
+    text-align: center;
+  }
+  .call-to-action-text {
+    text-align: center;
+  }
+  .call-to-action-text a.btn {
+    float: none;
+    margin-top: 20px;
+  }
+  .single-testimonial {
+    width: 100%;
+  }
+  .header-left li {
+    border-left: inherit;
+  }
+  .header-left li:last-child {
+    border-right: inherit;
+  }
+  .faq-sec .panel-heading a {
+    font-size: 18px;
+  }
+  .faq-sec .panel-title a::before {
+    font-size: 18px;
+  }
+  .about-desc h1 {
+    font-size: 28px;
+  }
+  .sec-title h1 {
+    font-size: 32px;
+  }
+  .price-box span.amount {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 515px) and (max-width: 767px) {
+  .team-member::after {
+    height: 42%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 492px) {
+  .header-left {
+    text-align: center;
+  }
+  .header-left li {
+    margin: 10px 0;
+  }
+  .slider-text h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .slider-text ul {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+  .header-left li {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 390px) {
+  .sec-title h1 {
+    font-size: 28px;
+  }
+}

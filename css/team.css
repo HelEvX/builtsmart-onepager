@@ -1,0 +1,101 @@
+.team-member {
+  background: var(--text-color-light) none repeat scroll 0 0;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out 0s;
+  z-index: 2;
+}
+.team-member:hover .team-overlay {
+  visibility: visible;
+  transition: all 0.4s ease-in-out 0s;
+  top: 0px;
+}
+.team-member:hover .team-thumb {
+  transition: all 0.4s ease-in-out 0s;
+}
+.team-thumb {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out 0s;
+}
+.team-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 100%;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out 0s;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.team-overlay ul {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.team-member img {
+  width: 100%;
+}
+.team-member h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out 0s;
+}
+.team-member h3 {
+  font-size: 14px;
+  transition: all 0.4s ease-in-out 0s;
+}
+.team-overlay li a {
+  width: 30px;
+  height: 30px;
+  padding: 0 5px;
+  display: inline-block;
+  background: var(--secondary-color-darker);
+  border-radius: 100%;
+  color: var(--text-color-light);
+  text-align: center;
+  line-height: 30px;
+}
+.team-overlay li {
+  transition: 0.6s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  display: inline-block;
+  text-align: left;
+  padding: 0 5px;
+}
+.team-member:hover .team-overlay li {
+  transform: translateY(0px);
+}
+.team-overlay li:nth-child(1) {
+  transform: translateY(20px);
+  transition-delay: 0.1s;
+}
+.team-overlay li:nth-child(2) {
+  transform: translateY(40px);
+  transition-delay: 0.2s;
+}
+.team-overlay li:nth-child(3) {
+  transform: translateY(60px);
+  transition-delay: 0.3s;
+}
+.team-overlay li:nth-child(4) {
+  transform: translateY(80px);
+  transition-delay: 0.4s;
+}
+.team-overlay li:nth-child(5) {
+  transform: translateY(100px);
+  transition-delay: 0.5s;
+}
+.team-member li i {
+  color: var(--text-color-light);
+}

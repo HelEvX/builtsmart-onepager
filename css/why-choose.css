@@ -1,0 +1,99 @@
+.why-choose-thumb {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+}
+.why-choose-thumb img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.why-choose-text {
+  padding: 30px 20px;
+  border-top: 0;
+}
+.why-choose-inner {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 0 5px 1px #f2f2f2;
+  transition: all 0.4s ease 0s;
+}
+.why-choose-text h2 {
+  font-size: 22px;
+}
+/* .why-choose-inner:hover .why-choose-text h2 a {
+  color: var(--primary-color);
+} */
+.why-choose-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: var(--secondary-color);
+  line-height: 55px;
+  text-align: left;
+  margin: 0px auto;
+  left: 20px;
+  bottom: -100px;
+  padding: 12px;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+/* .why-choose-inner:hover .why-choose-icon {
+  visibility: visible;
+  transition: all 0.4s ease 0s;
+  opacity: 1;
+  bottom: 0px;
+} */
+/* .why-choose-thumb::before {
+  content: "";
+  background: var(--primary-color-darker);
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  transition: all 0.4s ease 0s;
+}
+.why-choose-inner:hover .why-choose-thumb::before {
+  width: 100%;
+  transition: all 0.4s ease 0s;
+} */
+.readmore {
+  color: var(--primary-color);
+  font-weight: 600;
+  position: relative;
+}
+.readmore::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  background: var(--secondary-color);
+  z-index: -1;
+}
+/* .why-choose-inner.why-choose-inner2:hover {
+  box-shadow: 0 0 29px 1px var(--border-color-light);
+  transition: all 0.4s ease 0s;
+} */
+/* The End */
+/* Visueel verbergen zonder display:none zodat bots het veld nog in de DOM zien.
+     Deze regels zijn specifiek voor .honeypot en raken geen andere classes. */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); /* betere compatibiliteit */
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
