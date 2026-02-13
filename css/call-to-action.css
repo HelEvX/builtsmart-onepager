@@ -47,6 +47,104 @@
   transition: all 0.4s ease-in-out 0s;
   color: var(--primary-color);
 }
+
+.faq-banner-sec {
+  background: #f3f4f6;
+  padding: 56px 0;
+}
+
+.faq-banner-inner {
+  background: #242a31;
+  border: 1px solid #343b44;
+  border-radius: var(--ui-radius-lg);
+  padding: 38px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  box-shadow: 0 10px 18px rgba(26, 30, 34, 0.16);
+}
+
+.faq-banner-content {
+  color: #f3f4f5;
+  max-width: 820px;
+}
+
+.faq-banner-content h2 {
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.faq-banner-content h2 span {
+  color: #ffc500;
+}
+
+.faq-banner-content p {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d7dbdf;
+}
+
+.faq-banner-content p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffc500;
+  color: #1c1f22;
+  border: 1px solid #e0ad00;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 14px 24px;
+  border-radius: var(--ui-radius-md);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.faq-banner-btn:hover {
+  background: #ffcf2a;
+  color: #171a1d;
+  transform: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .faq-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 24px;
+  }
+
+  .faq-banner-content h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .faq-banner-sec {
+    padding: 42px 0;
+  }
+
+  .faq-banner-content h2 {
+    font-size: 26px;
+  }
+
+  .faq-banner-content p {
+    font-size: 16px;
+  }
+
+  .faq-banner-btn {
+    width: 100%;
+  }
+}
 /*
 23.404 Page Section 
 ======================*/

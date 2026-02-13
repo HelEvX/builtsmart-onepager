@@ -114,100 +114,303 @@
     <div class="about-us-sec pt-100 pb-100" id="faq">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="faq-sec">
               <h1 class="faq-title">Veelgestelde vragen</h1>
-              <div class="panel-group" id="accordion" role="tablist">
-                <div class="panel">
-                  <div class="panel-heading" role="tab" id="titleOne">
-                    <h4 class="panel-title">
-                      <a
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne">
-                        Wanneer is de BuiltSmart tool gebruiksklaar?</a
-                      >
-                    </h4>
-                  </div>
-                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titleOne">
-                    <div class="panel-content">
-                      <p>Onze richtdatum voor lancering is begin 2027.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel">
-                  <div class="panel-heading active" role="tab" id="titleTwo">
-                    <h4 class="panel-title">
-                      <a
-                        class="collapse"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseTwo"
-                        aria-expanded="true"
-                        aria-controls="collapseTwo">
-                        Hoeveel kost een abonnement?</a
-                      >
-                    </h4>
-                  </div>
-                  <div id="collapseTwo" class="panel-collapse collapsed in" role="tabpanel" aria-labelledby="titleTwo">
-                    <div class="panel-content">
+              <div class="faq-accordion" id="faq-accordion">
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-1"
+                    id="faq-trigger-1">
+                    <span class="faq-question">1. Wat is BuiltSmart precies?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
+                    <div class="faq-panel-content">
                       <p>
-                        We bieden verschillende formules, waaronder ook een gratis versie. Professionele pakketten
-                        hebben extra functies zoals AI-analyse en teamtoegang.
+                        BuiltSmart is een professioneel platform voor aannemers en bouwteams in de residentiële
+                        woningbouw. Het ondersteunt het selecteren, beoordelen en goedkeuren van bouwmaterialen per
+                        project. Het platform bewaart zelf geen technische fiches, maar verwijst steeds naar de
+                        officiële bron bij de leverancier.
                       </p>
                     </div>
                   </div>
-                </div>
-                <div class="panel">
-                  <div class="panel-heading" role="tab" id="titleThree">
-                    <h4 class="panel-title">
-                      <a
-                        class="collapse"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                        href="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree">
-                        Kan ik resultaten of fiches exporteren of delen met collega's?
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="titleThree">
-                    <div class="panel-content">
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-2"
+                    id="faq-trigger-2">
+                    <span class="faq-question">2. Voor wie is BuiltSmart bedoeld?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+                    <div class="faq-panel-content">
                       <p>
-                        Jazeker! In BuiltSmart kun je eenvoudig projecten aanmaken en samenwerken binnen een gedeelde
-                        omgeving.
-                      </p>
-                      <p>
-                        Daarnaast kun je alle technische fiches en resultaten exporteren of downloaden in verschillende
-                        formaten, zodat je ze makkelijk kunt delen, opslaan of toevoegen aan je projectdocumentatie.
+                        BuiltSmart is bedoeld voor professionele beslissingsnemers in de bouwsector: aannemers,
+                        projectleiders en bouwteams. Het platform is niet gericht op doe-het-zelvers of particuliere
+                        eindgebruikers.
                       </p>
                     </div>
                   </div>
-                </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-3"
+                    id="faq-trigger-3">
+                    <span class="faq-question">3. Worden technische fiches in BuiltSmart opgeslagen?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        Nee. BuiltSmart host geen technische documentatie. Elke materiaalfiche verwijst naar de
+                        officiële technische kaart of productpagina van de leverancier. Die externe bron blijft de enige
+                        juridische referentie.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-4"
+                    id="faq-trigger-4">
+                    <span class="faq-question">4. Hoe werkt de materiaalgoedkeuring per project?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+                    <div class="faq-panel-content">
+                      <p>Binnen elk project kunnen materialen worden:</p>
+                      <ul>
+                        <li>toegevoegd (suggestie)</li>
+                        <li>beoordeeld (review)</li>
+                        <li>goedgekeurd of afgekeurd</li>
+                      </ul>
+                      <p>
+                        Goedgekeurde materialen vormen samen de definitieve materiaallijst voor dat project. Afgekeurde
+                        materialen blijven zichtbaar voor traceerbaarheid, maar worden duidelijk gemarkeerd.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-5"
+                    id="faq-trigger-5">
+                    <span class="faq-question">5. Kan hetzelfde materiaal in meerdere projecten gebruikt worden?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        Ja. Een materiaal kan in meerdere projecten voorkomen. In elk project wordt het als een aparte
+                        instantie behandeld, zodat beslissingen per project onafhankelijk blijven.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-6"
+                    id="faq-trigger-6">
+                    <span class="faq-question">6. Wat gebeurt er als een technische fiche verouderd is?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        BuiltSmart detecteert veroudering op basis van de documentdatum en kan aanduiden wanneer een
+                        herziening aanbevolen of vereist is. Leveranciers krijgen daarnaast inzicht in hun opgenomen
+                        productkaarten en kunnen aangeven wanneer een update nodig is.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-7"
+                    id="faq-trigger-7">
+                    <span class="faq-question">7. Wat kan een leverancier in het platform doen?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-7" role="region" aria-labelledby="faq-trigger-7" hidden>
+                    <div class="faq-panel-content">
+                      <p>Leveranciers krijgen toegang tot een eigen dashboard waar zij:</p>
+                      <ul>
+                        <li>zien welke technische fiches in het systeem zijn opgenomen</li>
+                        <li>kunnen aangeven of een fiche correct is</li>
+                        <li>wijzigingen of een nieuwe bron-URL kunnen voorstellen</li>
+                        <li>entries kunnen markeren voor herziening</li>
+                      </ul>
+                      <p>
+                        Zij kunnen geen materialen verwijderen. De interne beheerder blijft verantwoordelijk voor
+                        publicatie en validatie.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-8"
+                    id="faq-trigger-8">
+                    <span class="faq-question">8. Hoe wordt de juistheid van gegevens gewaarborgd?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-8" role="region" aria-labelledby="faq-trigger-8" hidden>
+                    <div class="faq-panel-content">
+                      <p>Elke entry bewaart de ingevoerde waarden zoals ze werden vastgelegd, samen met:</p>
+                      <ul>
+                        <li>de bron-URL</li>
+                        <li>de documentdatum</li>
+                        <li>de laatste herzieningsdatum</li>
+                        <li>eventuele opmerkingen van leverancier of interne beheerder</li>
+                      </ul>
+                      <p>
+                        De leverancierbron blijft altijd de referentie. Het platform ondersteunt transparantie en
+                        traceerbaarheid.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-9"
+                    id="faq-trigger-9">
+                    <span class="faq-question">9. Kunnen projecten gedeeld worden met externe partijen?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-9" role="region" aria-labelledby="faq-trigger-9" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        Ja. Projecten kunnen via een publieke, lees-only link gedeeld worden voor presentaties,
+                        klantenoverleg of demonstraties. Deze weergave laat geen wijzigingen toe.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-10"
+                    id="faq-trigger-10">
+                    <span class="faq-question">10. Biedt BuiltSmart ook rapporten of exportmogelijkheden?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-10" role="region" aria-labelledby="faq-trigger-10" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        In de huidige versie (POC) ligt de focus op selectie, review en structurering van materialen.
+                        Geavanceerde rapportering, exports en automatisaties maken geen deel uit van de eerste versie.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-11"
+                    id="faq-trigger-11">
+                    <span class="faq-question">11. Is BuiltSmart gekoppeld aan een specifieke leverancier?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-11" role="region" aria-labelledby="faq-trigger-11" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        Nee. BuiltSmart is leverancier-onafhankelijk. Het platform kan samenwerken met meerdere erkende
+                        leveranciers en ondersteunt een transparante reviewstructuur zonder exclusiviteit.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="faq-item">
+                  <button
+                    class="faq-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-panel-12"
+                    id="faq-trigger-12">
+                    <span class="faq-question">12. Hoe zit het met aansprakelijkheid?</span>
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="faq-panel" id="faq-panel-12" role="region" aria-labelledby="faq-trigger-12" hidden>
+                    <div class="faq-panel-content">
+                      <p>
+                        BuiltSmart is een ondersteunend hulpmiddel voor projectstructuur en materiaaloverzicht. De
+                        officiële technische fiche van de leverancier blijft steeds de geldende en juridisch bindende
+                        bron. Het platform vervangt geen technische validatie of professionele verantwoordelijkheid.
+                      </p>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-5">
-            <div class="about-desc">
-              <h1>Ben je actief in de bouw en werk je regelmatig met <span>technische fiches?</span></h1>
-              <p>
-                Wij helpen je om je rendement te verbeteren door het zoeken, vergelijken en vinden van de juiste
-                documentatie een stuk eenvoudiger te maken.
-              </p>
-              <p>
-                Met onze slimme tools bespaar je tijd, verhoog je nauwkeurigheid en werk je efficiënter aan elk project.
-              </p>
-              <!-- <a href="#">Read More</a> -->
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- FAQ Section End -->
+
+    <!-- FAQ Banner Section Start -->
+    <div class="faq-banner-sec">
+      <div class="container">
+        <div class="faq-banner-inner">
+          <div class="faq-banner-content">
+            <h2>Ben je actief in de bouw en werk je regelmatig met <span>technische fiches?</span></h2>
+            <p>
+              Wij helpen je om je rendement te verbeteren door het zoeken, vergelijken en vinden van de juiste
+              documentatie een stuk eenvoudiger te maken.
+            </p>
+            <p>
+              Met onze slimme tools bespaar je tijd, verhoog je nauwkeurigheid en werk je efficiënter aan elk project.
+            </p>
+          </div>
+          <a href="contact.html" class="faq-banner-btn">Vraag een demo aan</a>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ Banner Section End -->
+
     <!-- Waarom BuiltSmart? Section Start -->
     <div data-scroll-index="1" id="waarom" class="service pt-100 pb-70">
       <div class="container">
