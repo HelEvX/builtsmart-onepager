@@ -61,21 +61,13 @@
   padding: 10px;
 }
 .single-input-fieldsbtn input[type="submit"] {
-  background: var(--secondary-color) none repeat scroll 0 0;
-  border: 1px solid var(--secondary-color);
-  color: var(--text-color-primary);
-  display: inline-block;
-  font-weight: 600;
   padding: 14px 0;
   width: 150px;
   margin-top: 20px;
   font-size: 16px;
 }
 .single-input-fieldsbtn input[type="submit"]:hover {
-  background: var(--primary-color);
-  color: var(--text-color-light);
-  transition: all 0.4s ease-in-out 0s;
-  border-color: var(--primary-color);
+  color: var(--ui-btn-primary-text);
 }
 .contact-field {
   display: inline-block;

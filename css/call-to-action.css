@@ -33,19 +33,12 @@
   font-weight: bold;
 }
 .call-to-action-text a.btn {
-  background: var(--text-color-light) none repeat scroll 0 0;
-  border-radius: 0;
-  color: var(--primary-color);
   float: right;
-  font-weight: bold;
   padding: 14px 36px;
-  text-transform: uppercase;
   margin-top: 10px;
 }
 .call-to-action-text a.btn:hover {
-  background: var(--secondary-color);
-  transition: all 0.4s ease-in-out 0s;
-  color: var(--primary-color);
+  color: var(--ui-btn-primary-text);
 }
 
 .faq-banner-sec {
@@ -96,24 +89,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ffc500;
-  color: #1c1f22;
-  border: 1px solid #e0ad00;
-  box-shadow: none;
   font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
   padding: 14px 24px;
-  border-radius: var(--ui-radius-md);
   white-space: nowrap;
-  transition: all 0.2s ease;
 }
 
 .faq-banner-btn:hover {
-  background: #ffcf2a;
-  color: #171a1d;
-  transform: none;
+  color: var(--ui-btn-primary-text);
 }
 
 @media only screen and (max-width: 991px) {

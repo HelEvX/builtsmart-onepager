@@ -113,17 +113,13 @@
   text-align: right;
 }
 .appointment-button a {
-  background: var(--secondary-color);
   padding: 12px 26px;
   display: inline-block;
-  font-weight: 600;
   font-size: 15px;
-  color: var(--text-color-primary);
   width: 100%;
   text-align: center;
 }
 .appointment-button a:hover {
-  background: var(--primary-color);
-  color: var(--text-color-light);
+  color: var(--ui-btn-primary-text);
 }
 /*header top bottom*/

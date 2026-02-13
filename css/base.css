@@ -1,7 +1,7 @@
 @import url("./tokens.css");
 
 :root {
---primary-color: var(--text);
+  --primary-color: var(--text);
   --primary-color-darker: var(--n-900);
   --primary-color-lighter: var(--n-700);
 
@@ -120,6 +120,54 @@ a:hover {
   color: var(--primary-color-lighter);
   text-decoration: none;
 }
+
+.btn,
+.appointment-button a,
+.call-to-action-text a.btn,
+.faq-banner-btn,
+.btn.price_btn,
+.single-input-fieldsbtn input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--ui-btn-font-weight);
+  border-radius: var(--ui-btn-radius);
+  letter-spacing: var(--ui-btn-tracking);
+  line-height: var(--ui-btn-line-height);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color-darker);
+  background: var(--ui-btn-primary-bg);
+  color: var(--ui-btn-primary-text);
+  box-shadow: var(--ui-btn-shadow);
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+}
+
+.btn:hover,
+.appointment-button a:hover,
+.call-to-action-text a.btn:hover,
+.faq-banner-btn:hover,
+.btn.price_btn:hover,
+.single-input-fieldsbtn input[type="submit"]:hover {
+  background: var(--ui-btn-primary-bg-hover);
+  color: var(--ui-btn-primary-text);
+  box-shadow: var(--ui-btn-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible,
+.appointment-button a:focus-visible,
+.call-to-action-text a.btn:focus-visible,
+.faq-banner-btn:focus-visible,
+.btn.price_btn:focus-visible,
+.single-input-fieldsbtn input[type="submit"]:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-focus-ring);
+}
+
 ul {
   list-style: outside none none;
   margin: 0;

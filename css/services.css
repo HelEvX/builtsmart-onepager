@@ -139,15 +139,11 @@
   padding: 30px 0;
 }
 .btn.price_btn {
-  background: var(--secondary-color);
   font-size: 14px;
   padding: 12px 20px;
-  text-transform: uppercase;
   position: relative;
   z-index: 2;
-  border-radius: 0px;
   overflow: hidden;
-  color: var(--text-color-light);
 }
 /*
 12. Project Details Page Section
