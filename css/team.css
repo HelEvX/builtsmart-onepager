@@ -20,6 +20,8 @@
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease-in-out 0s;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 .team-overlay {
   position: absolute;
@@ -29,16 +31,22 @@
   top: 100%;
   visibility: hidden;
   transition: all 0.4s ease-in-out 0s;
-  background-color: rgba(0, 0, 0, 0.65);
+  background: linear-gradient(180deg, rgba(12, 10, 9, 0.2) 0%, rgba(12, 10, 9, 0.78) 100%);
 }
 .team-overlay ul {
   position: absolute;
   top: 50%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   transform: translateY(-50%);
 }
 .team-member img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 33%;
 }
 .team-member h2 {
   font-size: 18px;
@@ -52,15 +60,25 @@
   transition: all 0.4s ease-in-out 0s;
 }
 .team-overlay li a {
-  width: 30px;
-  height: 30px;
-  padding: 0 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   display: inline-block;
-  background: var(--secondary-color-darker);
+  background: rgba(250, 250, 249, 0.12);
+  border: 1px solid rgba(250, 250, 249, 0.55);
   border-radius: 100%;
   color: var(--text-color-light);
   text-align: center;
-  line-height: 30px;
+  line-height: 36px;
+  transition: all 0.2s ease;
+}
+.team-overlay li a:hover {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--ui-btn-primary-text);
+}
+.team-overlay li a i {
+  color: inherit;
 }
 .team-overlay li {
   transition: 0.6s;
@@ -98,4 +116,29 @@
 }
 .team-member li i {
   color: var(--text-color-light);
+}
+
+.team-group-photo {
+  margin-top: 28px;
+  border-radius: var(--ui-radius-md);
+  overflow: hidden;
+  box-shadow: var(--ui-shadow-1);
+}
+
+.team-group-photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+.team-members-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 992px) {
+  .team-members-row .team-col-fifth {
+    width: 20%;
+  }
 }
