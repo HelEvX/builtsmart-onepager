@@ -1,46 +1,53 @@
-.testimonial-sec {
+.sponsors-sec {
   background-color: var(--background-color-secondary);
 }
-.client-thumb {
-  height: auto;
-  width: 200px;
+
+.sponsors-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
-.all-testimonial {
+
+.sponsors-track {
+  display: flex;
+  gap: 18px;
+  will-change: transform;
+  transform: translateX(0);
+}
+
+.sponsor-item {
+  flex: 0 0 calc((100% - 54px) / 4);
+  background: var(--ui-surface-bg);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--ui-radius-md);
+  padding: 18px 16px;
   text-align: center;
-  padding-bottom: 20px;
+  box-shadow: var(--ui-shadow-1);
 }
-.client-comment h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: var(--text-color-subtle);
+
+.sponsor-logo-wrap {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }
-.client-thumb {
-  margin: 0px auto;
-  text-align: center;
-  margin-bottom: 30px;
+
+.sponsor-logo-wrap img {
+  max-height: 72px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
 }
-.client-comment {
-  margin: 0px auto;
+
+@media only screen and (max-width: 991px) {
+  .sponsor-item {
+    flex-basis: calc((100% - 36px) / 3);
+  }
 }
-.client-comment > ul {
-  padding-bottom: 15px;
-}
-.client-comment li {
-  display: inline-block;
-}
-.client-comment li a {
-  border: 2px solid var(--primary-color);
-  border-radius: 100%;
-  color: var(--primary-color);
-  display: inline-block;
-  height: 30px;
-  line-height: 26px;
-  width: 30px;
-  margin: 0px 5px;
-}
-.client-comment li a:hover {
-  background: var(--primary-color);
-  transition: all 0.4s ease-in-out 0s;
-  color: var(--text-color-light);
+
+@media only screen and (max-width: 767px) {
+  .sponsor-item {
+    flex-basis: calc((100% - 18px) / 2);
+  }
 }

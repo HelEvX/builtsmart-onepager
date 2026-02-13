@@ -184,9 +184,89 @@ const initSmoothScroll = () => {
   });
 };
 
+const initSponsorsBanner = () => {
+  const banners = document.querySelectorAll("[data-sponsors-banner]");
+  if (!banners.length) return;
+
+  banners.forEach((banner) => {
+    const track = banner.querySelector(".sponsors-track");
+    if (!track) return;
+
+    const originalItems = [...track.querySelectorAll(".sponsor-item")];
+    if (originalItems.length < 2) return;
+
+    const cloneCount = Math.min(originalItems.length, 4);
+    for (let index = 0; index < cloneCount; index++) {
+      const clone = originalItems[index].cloneNode(true);
+      clone.classList.add("is-clone");
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    }
+
+    let itemWidth = 0;
+    let currentIndex = 0;
+    let autoTimer = null;
+    let isPaused = false;
+
+    const updateStepWidth = () => {
+      const firstItem = track.querySelector(".sponsor-item");
+      if (!firstItem) return;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap || style.columnGap || "0") || 0;
+      itemWidth = firstItem.getBoundingClientRect().width + gap;
+      track.style.transition = "none";
+      track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+      track.offsetHeight;
+      track.style.transition = "transform 0.55s ease";
+    };
+
+    const goToStep = (targetIndex, withTransition = true) => {
+      if (!itemWidth) updateStepWidth();
+      track.style.transition = withTransition ? "transform 0.55s ease" : "none";
+      track.style.transform = `translateX(${-targetIndex * itemWidth}px)`;
+      currentIndex = targetIndex;
+    };
+
+    const tick = () => {
+      if (isPaused) return;
+      goToStep(currentIndex + 1, true);
+    };
+
+    const startAuto = () => {
+      if (autoTimer) clearInterval(autoTimer);
+      autoTimer = window.setInterval(tick, 2600);
+    };
+
+    track.addEventListener("transitionend", (event) => {
+      if (event.propertyName !== "transform") return;
+      if (currentIndex < originalItems.length) return;
+      goToStep(0, false);
+    });
+
+    banner.addEventListener("mouseenter", () => {
+      isPaused = true;
+    });
+    banner.addEventListener("mouseleave", () => {
+      isPaused = false;
+    });
+    banner.addEventListener("focusin", () => {
+      isPaused = true;
+    });
+    banner.addEventListener("focusout", () => {
+      isPaused = false;
+    });
+
+    window.addEventListener("resize", updateStepWidth);
+
+    updateStepWidth();
+    startAuto();
+  });
+};
+
 document.addEventListener("DOMContentLoaded", async () => {
   await loadPartials();
   initMobileMenu();
   initFaqAccordion();
   initSmoothScroll();
+  initSponsorsBanner();
 });
