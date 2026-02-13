@@ -54,7 +54,7 @@
   .header-left li {
     position: relative;
     display: inline-block;
-    color: #ffffff;
+    color: var(--text-color-light);
   }
   .main-menu ul li a {
     padding: 34px 4px;

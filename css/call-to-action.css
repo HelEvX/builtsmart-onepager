@@ -42,43 +42,43 @@
 }
 
 .faq-banner-sec {
-  background: #f3f4f6;
+  background: var(--background-color-secondary);
   padding: 56px 0;
 }
 
 .faq-banner-inner {
-  background: #242a31;
-  border: 1px solid #343b44;
+  background: var(--background-color-dark);
+  border: 1px solid var(--border-color-primary);
   border-radius: var(--ui-radius-lg);
   padding: 38px 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 26px;
-  box-shadow: 0 10px 18px rgba(26, 30, 34, 0.16);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
 }
 
 .faq-banner-content {
-  color: #f3f4f5;
+  color: var(--text-color-light);
   max-width: 820px;
 }
 
 .faq-banner-content h2 {
-  color: #ffffff;
+  color: var(--text-color-light);
   font-size: 34px;
   line-height: 1.25;
   margin: 0 0 14px;
 }
 
 .faq-banner-content h2 span {
-  color: #ffc500;
+  color: var(--secondary-color);
 }
 
 .faq-banner-content p {
   margin: 0 0 10px;
   font-size: 18px;
   line-height: 1.6;
-  color: #d7dbdf;
+  color: var(--border-color-light);
 }
 
 .faq-banner-content p:last-child {
