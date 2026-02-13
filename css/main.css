@@ -74,7 +74,8 @@
   border: 0;
   outline: none;
 }
-html, body {
+html,
+body {
   height: 100%;
   font-size: 16px;
   color: var(--text-color-secondary);
@@ -92,7 +93,12 @@ img {
 p {
   margin: 0 0 20px;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 20px;
   font-weight: 600;
   font-family: var(--font-primary);
@@ -113,7 +119,8 @@ a {
   text-decoration: none;
   color: var(--primary-color);
 }
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0 none;
   color: var(--primary-color-lighter);
   text-decoration: none;
@@ -133,7 +140,8 @@ ul {
   text-shadow: none;
   color: var(--text-color-light);
 }
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
 }
 .slider-overlay {
@@ -357,8 +365,7 @@ textarea:focus, input:focus {
   transition: all 0.4s ease 0s;
 }
 .slider-text li a:before {
-  content: "\f178";
-  font-family: fontawesome;
+  content: "→";
   float: right;
   top: 0px;
   position: relative;
@@ -416,8 +423,7 @@ textarea:focus, input:focus {
   position: relative;
 }
 .about-desc a:before {
-  content: "\f178";
-  font-family: fontawesome;
+  content: "→";
   float: right;
   top: 0px;
   position: relative;
@@ -480,15 +486,14 @@ textarea:focus, input:focus {
 }
 .faq-sec .panel-title a:before {
   float: right !important;
-  font-family: FontAwesome;
-  content: "\f067";
+  content: "+";
   color: var(--text-color-subtle);
   font-weight: bold;
   font-size: 24px;
 }
 .faq-sec .panel-group .panel-heading.active h4 a::before {
   float: right !important;
-  content: "\f068";
+  content: "−";
   font-weight: bold;
   font-size: 24px;
   color: var(--text-color-subtle);
@@ -1093,8 +1098,7 @@ footer.footer {
   color: var(--text-color-light);
 }
 .footer-widget-menu li:before {
-  content: "\f101";
-  font-family: fontawesome;
+  content: "›";
   left: 0px;
   top: 0px;
   position: relative;
@@ -1125,7 +1129,8 @@ footer.footer {
   margin: 0;
   text-align: left;
 }
-.copy-right span, .copy-right span a {
+.copy-right span,
+.copy-right span a {
   color: var(--secondary-color);
 }
 /*
@@ -1238,263 +1243,264 @@ footer.footer {
 /* Responsive rules merged from responsive.css */
 
 @media only screen and (min-width: 992px) and (max-width: 5000px) {
-.team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(4n + 1) {
+  .team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(4n + 1) {
     clear: both;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-.main-menu ul li a {
+  .main-menu ul li a {
     padding: 40px 6px;
   }
-.slider-wrapper {
+  .slider-wrapper {
     width: 100%;
   }
-.slider-text h1 {
+  .slider-text h1 {
     font-size: 48px;
   }
-.appointment-button a {
+  .appointment-button a {
     padding: 12px 14px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-body {
+  body {
     font-size: 15px;
     line-height: 24px;
   }
-h1 {
+  h1 {
     font-size: 22px;
   }
-h2 {
+  h2 {
     font-size: 18px;
   }
-h3 {
+  h3 {
     font-size: 16px;
   }
-.pt-100 {
+  .pt-100 {
     padding-top: 80px;
   }
-.pb-100 {
+  .pb-100 {
     padding-bottom: 80px;
   }
-.pb-70 {
+  .pb-70 {
     padding-bottom: 40px;
   }
-.logo {
+  .logo {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 0;
   }
-.sngl-price {
+  .sngl-price {
     margin-bottom: 30px;
   }
-.team-member::after {
+  .team-member::after {
     height: 38%;
   }
-.header-left li {
+  .header-left li {
     position: relative;
     display: inline-block;
     color: #ffffff;
   }
-.main-menu ul li a {
+  .main-menu ul li a {
     padding: 34px 4px;
   }
-.main-menu {
+  .main-menu {
     text-align: center;
   }
-.slider-text {
+  .slider-text {
     width: 767px;
   }
-.slider-text h1 {
+  .slider-text h1 {
     font-size: 36px;
   }
-.main-menu ul ul {
+  .main-menu ul ul {
     top: 92px;
   }
-.sec-title {
+  .sec-title {
     text-align: center;
     margin: 0 0px 50px 0px;
   }
-.service-item .col-md-4.col-sm-6:nth-child(2n + 1) {
+  .service-item .col-md-4.col-sm-6:nth-child(2n + 1) {
     clear: both;
   }
-.footer-widget-menu {
+  .footer-widget-menu {
     margin-bottom: 30px;
   }
-.call-to-action-text h2 {
+  .call-to-action-text h2 {
     font-size: 24px;
   }
-.team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(2n + 1) {
+  .team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(2n + 1) {
     clear: both;
   }
-.slider-wrapper {
+  .slider-wrapper {
     width: 100%;
   }
-.faq-title {
+  .faq-title {
     font-size: 28px;
   }
-.faq-sec .panel-heading a {
+  .faq-sec .panel-heading a {
     font-size: 18px;
   }
-.faq-sec .panel-title a::before {
+  .faq-sec .panel-title a::before {
     font-size: 18px;
   }
-.about-desc h1 {
+  .about-desc h1 {
     font-size: 28px;
   }
-.sec-title h1 {
+  .sec-title h1 {
     font-size: 32px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-body {
+  body {
     font-size: 14px;
     line-height: 24px;
   }
-h1 {
+  h1 {
     font-size: 22px;
   }
-h2 {
+  h2 {
     font-size: 18px;
   }
-h3 {
+  h3 {
     font-size: 16px;
   }
-.sec-title h1 {
+  .sec-title h1 {
     font-size: 24px;
   }
-.why-choose-thumb img {
+  .why-choose-thumb img {
     width: 100%;
   }
-.sngl-price {
+  .sngl-price {
     margin-bottom: 50px;
   }
-.slider-wrapper, .slider-caption {
+  .slider-wrapper,
+  .slider-caption {
     width: 100%;
   }
-.slider-text {
+  .slider-text {
     width: 100%;
   }
-.pt-100 {
+  .pt-100 {
     padding-top: 80px;
   }
-.pb-100 {
+  .pb-100 {
     padding-top: 80px;
   }
-.pb-70 {
+  .pb-70 {
     padding-top: 40px;
   }
-.appointment-button {
+  .appointment-button {
     display: none;
   }
-.slider-text p {
+  .slider-text p {
     width: 100%;
   }
-.header-left {
+  .header-left {
     text-align: center;
   }
-.about-desc h1 {
+  .about-desc h1 {
     font-size: 32px;
   }
-.slider-text {
+  .slider-text {
     padding: 0 30px;
   }
-.hd-sec {
+  .hd-sec {
     padding-top: 24px;
     position: relative;
   }
-.logo {
+  .logo {
     text-align: left;
     padding: 0;
     position: relative;
     z-index: 99;
   }
-.slider-text h1 {
+  .slider-text h1 {
     font-size: 34px;
   }
-.team-member::after {
+  .team-member::after {
     height: 38%;
   }
-.slider-text li a {
+  .slider-text li a {
     margin-bottom: 20px;
   }
-.pagehding-sec {
+  .pagehding-sec {
     padding: 80px 0;
   }
-.page-heading h1 {
+  .page-heading h1 {
     font-size: 28px;
     text-align: center;
   }
-.sec-title {
+  .sec-title {
     text-align: center;
     margin: 0 0px 50px 0px;
   }
-.footer-sec .col-md-3.col-sm-6 {
+  .footer-sec .col-md-3.col-sm-6 {
     margin: 40px 0;
   }
-.footer-bottom-sec p {
+  .footer-bottom-sec p {
     text-align: center;
   }
-.call-to-action-text {
+  .call-to-action-text {
     text-align: center;
   }
-.call-to-action-text a.btn {
+  .call-to-action-text a.btn {
     float: none;
     margin-top: 20px;
   }
-.single-testimonial {
+  .single-testimonial {
     width: 100%;
   }
-.header-left li {
+  .header-left li {
     border-left: inherit;
   }
-.header-left li:last-child {
+  .header-left li:last-child {
     border-right: inherit;
   }
-.faq-sec .panel-heading a {
+  .faq-sec .panel-heading a {
     font-size: 18px;
   }
-.faq-sec .panel-title a::before {
+  .faq-sec .panel-title a::before {
     font-size: 18px;
   }
-.about-desc h1 {
+  .about-desc h1 {
     font-size: 28px;
   }
-.sec-title h1 {
+  .sec-title h1 {
     font-size: 32px;
   }
-.price-box span.amount {
+  .price-box span.amount {
     font-size: 32px;
   }
 }
 @media only screen and (min-width: 515px) and (max-width: 767px) {
-.team-member::after {
+  .team-member::after {
     height: 42%;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 492px) {
-.header-left {
+  .header-left {
     text-align: center;
   }
-.header-left li {
+  .header-left li {
     margin: 10px 0;
   }
-.slider-text h1 {
+  .slider-text h1 {
     font-size: 28px;
     line-height: 40px;
   }
-.slider-text ul {
+  .slider-text ul {
     margin-top: 40px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 420px) {
-.header-left li {
+  .header-left li {
     width: 100%;
     padding: 0;
     text-align: center;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 390px) {
-.sec-title h1 {
+  .sec-title h1 {
     font-size: 28px;
   }
 }
