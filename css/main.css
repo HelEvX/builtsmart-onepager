@@ -38,7 +38,6 @@
 
   --font-primary: "DM Sans", sans-serif;
 }
-
 /* Table of contents
 =========================
 1.Preloader - removed
@@ -66,7 +65,6 @@
 23.404 Page Section 
 24.Footer Section 
 ===========================*/
-
 /*------------------*/
 /*Theme default CSS
 /*------------------*/
@@ -76,9 +74,7 @@
   border: 0;
   outline: none;
 }
-
-html,
-body {
+html, body {
   height: 100%;
   font-size: 16px;
   color: var(--text-color-secondary);
@@ -96,18 +92,12 @@ img {
 p {
   margin: 0 0 20px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
   font-weight: 600;
   font-family: var(--font-primary);
   color: var(--primary-color);
 }
-
 h1 {
   font-size: 32px;
   letter-spacing: 0.2rem;
@@ -118,14 +108,12 @@ h2 {
 h3 {
   font-size: 16px;
 }
-
 a {
   transition: all 0.5s ease-out;
   text-decoration: none;
   color: var(--primary-color);
 }
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0 none;
   color: var(--primary-color-lighter);
   text-decoration: none;
@@ -135,7 +123,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 ::-moz-selection {
   background: var(--secondary-color);
   text-shadow: none;
@@ -146,8 +133,7 @@ ul {
   text-shadow: none;
   color: var(--text-color-light);
 }
-textarea:focus,
-input:focus {
+textarea:focus, input:focus {
   outline: none;
 }
 .slider-overlay {
@@ -174,45 +160,9 @@ input:focus {
 .pb-70 {
   padding-bottom: 70px;
 }
-.bg-color {
-  background: var(--background-color-secondary);
-}
-.no-padding-left {
-  padding-left: 0px;
-}
-.no-padding-right {
-  padding-right: 0px;
-}
-.bg-gray {
-  background: var(--background-color-tertiary);
-}
-
 /*
 2.Scrollup
 ==============*/
-#scrollUp {
-  background: var(--secondary-color) none repeat scroll 0 0;
-  border-radius: 100%;
-  bottom: 5px;
-  color: var(--text-color-light);
-  font-size: 16px;
-  height: 40px;
-  right: 20px;
-  text-align: center;
-  text-decoration: none;
-  width: 40px;
-}
-#scrollUp:hover {
-  opacity: 1;
-  color: var(--text-color-light) !important;
-  background: var(--secondary-color-lighter);
-}
-#scrollUp i {
-  display: block;
-  font-weight: bold;
-  padding-top: 11px;
-}
-
 /*
 3.Header Section
 ==================*/
@@ -221,7 +171,6 @@ input:focus {
   border-bottom: 1px solid var(--border-color-primary);
   text-align: right;
 }
-
 .header-left ul {
   display: inline-block;
 }
@@ -239,45 +188,6 @@ input:focus {
   color: var(--text-color-light);
   margin-right: 10px;
 }
-.header-right-div {
-  text-align: right;
-}
-.header-right {
-  text-align: right;
-  position: relative;
-  z-index: 1;
-  padding: 10px 0;
-  display: inline-block;
-  z-index: 99;
-}
-.header-right a {
-  color: var(--text-color-light) fff;
-  font-weight: 300;
-  padding-left: 15px;
-  position: relative;
-  text-decoration: none;
-}
-.header-right a span {
-  margin-left: 10px;
-}
-.social-profile,
-.social-profile li {
-  display: inline-block;
-}
-.social-profile li a {
-  border-left: 1px solid var(--border-color-primary);
-  line-height: 54px;
-  width: 40px;
-  display: inline-block;
-  text-align: center;
-}
-.social-profile li:last-child a {
-  border-right: 1px solid var(--border-color-primary);
-}
-.social-profile li a i {
-  color: var(--text-color-light);
-}
-
 /*
 4.Menu  Section
 =================*/
@@ -292,7 +202,6 @@ input:focus {
   display: inline-block;
   text-align: right;
 }
-
 .main-menu ul {
   margin: 0;
   padding: 0;
@@ -319,7 +228,6 @@ input:focus {
   transition: all 0.4s 0s ease;
   color: var(--primary-color);
 }
-
 .main-menu ul ul {
   background: var(--primary-color) none repeat scroll 0 0;
   left: 12px;
@@ -363,68 +271,6 @@ input:focus {
   margin-left: 6px;
   font-size: 14px;
 }
-.menu-icon {
-  display: inline-block;
-  padding: 38px 0px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.cart-icon,
-.site-search {
-  display: inline-block;
-  border: 1px solid var(--primary-color);
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 100%;
-}
-.cart-icon a i {
-  font-size: 19px;
-}
-.site-search i {
-  color: var(--primary-color);
-  cursor: pointer;
-}
-.search-forum > form {
-  display: inline-flex;
-  background: var(--primary-color);
-  padding: 10px;
-}
-.search-forum input[type="text"] {
-  padding: 10px;
-}
-.search-forum input[type="submit"] {
-  padding: 10px;
-  background: var(--primary-color);
-  color: var(--text-color-light);
-}
-.site-search:hover .search-forum {
-  visibility: visible;
-  transition: all 0.4s ease 0s;
-  transform: scale(1);
-  opacity: 1;
-}
-.search-forum {
-  display: inline-block;
-  left: -220px;
-  opacity: 0;
-  position: absolute;
-  top: 107px;
-  transition: all 0.4s ease 0s;
-  visibility: hidden;
-  z-index: 2;
-  transform: scale(0);
-}
-.hd-sec.sticky_menu {
-  background-color: var(--text-color-light);
-  left: 0;
-  right: 0;
-  top: 0;
-  position: fixed;
-  z-index: 9999;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
-}
 .appointment-button {
   position: relative;
   z-index: 2;
@@ -449,69 +295,6 @@ input:focus {
   color: var(--text-color-light);
 }
 /*header top bottom*/
-.header-top-bottom {
-  padding: 60px 0;
-  background: var(--secondary-color);
-}
-.info-intro {
-  display: inline-block;
-  width: 100%;
-}
-.info-text h5 {
-  font-size: 16px;
-  margin-bottom: 0;
-  text-align: left;
-  color: var(--primary-color);
-}
-.info-text a,
-.info-text span {
-  font-size: 14px;
-  color: var(--text-color-light);
-}
-.info-intro i {
-  color: var(--text-color-light);
-  font-size: 26px;
-}
-.info-icon {
-  display: inline-block;
-  height: 50px;
-  margin-right: 10px;
-  position: relative;
-  width: 50px;
-  text-align: center;
-  border: 1px solid var(--primary-color);
-  line-height: 56px;
-  background: var(--primary-color);
-  top: -5px;
-}
-.info-text {
-  display: inline-block;
-  text-align: left;
-}
-.info-intro-number span {
-  color: var(--text-color-light);
-  font-size: 20px;
-  font-weight: 600;
-  float: right;
-  margin-top: 10px;
-}
-.menu-style1 {
-  position: absolute;
-  z-index: 99;
-  width: 100%;
-  top: 140px;
-}
-.nav-style1 {
-  background: var(--primary-color);
-  width: 100%;
-}
-.nav-style1 .main-menu ul li a {
-  color: var(--text-color-light);
-}
-.nav-style1 .appointment-button a {
-  background: var(--text-color-light);
-  color: var(--primary-color);
-}
 /*
 5.Slider Section
 ======================*/
@@ -541,10 +324,6 @@ input:focus {
   text-align: center;
   width: 900;
   margin: 0px auto;
-}
-.slider-caption span.subtitle {
-  color: var(--text-color-light);
-  font-size: 24px;
 }
 .slider-text ul {
   margin-top: 20px;
@@ -610,162 +389,6 @@ input:focus {
 .slider-text li:last-child a:hover:before {
   color: var(--text-color-light);
 }
-.all-slide .owl-controls {
-  position: absolute;
-  top: 45%;
-  width: 100%;
-  z-index: 99;
-  transform: translateY(-50%);
-}
-.all-slide .owl-controls .owl-buttons div {
-  background: none;
-  opacity: 1;
-}
-
-.all-slide .owl-controls .owl-prev {
-  left: 20px;
-  position: absolute;
-  transition: all 0.4s ease 0s;
-}
-.all-slide:hover .owl-prev {
-  transition: all 0.4s ease 0s;
-}
-
-.all-slide .owl-controls .owl-next {
-  right: 20px;
-  position: absolute;
-  transition: all 0.4s ease 0s;
-}
-.all-slide:hover .owl-next {
-  transition: all 0.4s ease 0s;
-}
-.all-slide .owl-controls .owl-prev i,
-.all-slide .owl-controls .owl-next i {
-  background: var(--text-color-light);
-  color: var(--primary-color);
-  font-size: 32px;
-  height: 50px;
-  line-height: 48px;
-  text-align: center;
-  transition: all 0.5s ease-out 0s;
-  width: 50px;
-  border-radius: 100%;
-}
-.all-slide .owl-controls .owl-next i:hover {
-  transition: all 0.5s ease-out 0s;
-  background: var(--secondary-color);
-  color: var(--text-color-light);
-  border-color: var(--secondary-color);
-}
-.all-slide .owl-controls .owl-prev i:hover {
-  transition: all 0.5s ease-out 0s;
-  background: var(--secondary-color);
-  color: var(--text-color-light);
-  border-color: var(--secondary-color);
-}
-.all-slide .owl-controls .owl-dots {
-  text-align: center;
-  bottom: -225px;
-  position: relative;
-  width: 100%;
-  margin: 0px auto;
-  padding: 15px 0;
-}
-.all-slide .owl-controls .owl-dot {
-  width: 2px;
-  height: 20px;
-  background: var(--text-color-light);
-  display: inline-block;
-  margin: 0px 3px;
-  transition: all 0.4s ease 0s;
-}
-.all-slide .owl-controls .owl-dot.active {
-  background: var(--secondary-color);
-  height: 30px;
-  transition: all 0.4s ease 0s;
-}
-.owl-carousel .owl-wrapper,
-.owl-carousel .owl-item {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-}
-.header-right span {
-  color: var(--text-color-light) fff;
-}
-.header-right span i {
-  margin-right: 10px;
-}
-.hd-search-field {
-  position: absolute;
-  right: 24px;
-  top: 5px;
-}
-.hd-search-field form {
-  width: 190px;
-  position: relative;
-}
-.hd-search-field input[type="text"] {
-  background: transparent;
-  padding: 3px 35px 3px 10px;
-  width: 100%;
-  border: 1px solid #858484;
-  border-radius: 6px;
-}
-.hd-search-field button {
-  background: transparent;
-  color: var(--text-color-light);
-  position: absolute;
-  padding: 4px 10px;
-  right: 0;
-  top: 0;
-}
-.hd-search-field button i {
-  color: var(--secondary-color-lighter);
-}
-.blog-sec .pagination.custom-pagination {
-  text-align: left;
-  width: 100%;
-}
-.pagination.custom-pagination li {
-  display: inline-block;
-}
-.pagination.custom-pagination li a {
-  color: var(--text-color-subtle);
-  font-size: 16px;
-  font-weight: 600;
-  height: 36px;
-  line-height: 22px;
-  margin: 2px 5px;
-  width: 36px;
-  border: none;
-  border-radius: 100%;
-  text-align: center;
-  border: 1px solid;
-}
-.pagination.custom-pagination li.active a {
-  background: var(--secondary-color) none repeat scroll 0 0;
-  color: var(--text-color-light);
-  border: 0px;
-}
-
-.pagination.custom-pagination li a:hover {
-  background: var(--primary-color) none repeat scroll 0 0;
-  color: var(--text-color-light);
-  border-color: var(--primary-color);
-}
-.blog-sec a.blog-btn {
-  color: var(--text-color-light);
-  font-weight: 600;
-  font-size: 16px;
-  display: inline-block;
-  width: 150px;
-  height: 50px;
-  text-align: center;
-  padding: 10px;
-  background: var(--primary-color);
-}
 /*
 6.About Us Section
 =================*/
@@ -783,9 +406,6 @@ input:focus {
 }
 .about-desc h1 span {
   color: var(--secondary-color);
-}
-.about-desc span.about-subtitle {
-  color: var(--primary-color);
 }
 .about-desc a {
   background: var(--secondary-color);
@@ -805,83 +425,6 @@ input:focus {
   padding-left: 10px;
   transition: all 0.4s ease 0s;
 }
-.about-sec {
-  background: var(--border-color-extra-light);
-}
-.company-ceo-info h2 {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.company-ceo-info span {
-  font-weight: 400;
-  margin-bottom: 20px;
-  display: inline-block;
-  width: 100%;
-  font-size: 16px;
-}
-.company-mission {
-  margin-top: 20px;
-}
-.company-mission h2 a {
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-.company-mission a {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-.video-inner {
-  position: relative;
-  margin-bottom: 40px;
-}
-.video-overlay {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.video-button {
-  text-align: center;
-  transform: translateY(-50%);
-  top: 50%;
-  position: relative;
-}
-.video-inner img {
-  width: 100%;
-}
-.video-button {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  background-color: transparent;
-  background-image: url("../img/icon/play_button.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  margin: 0px auto;
-}
-.video-button a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.video-button:hover {
-  -webkit-animation: none;
-  -moz-animation: none;
-  -ms-animation: none;
-  animation: none;
-}
-
 @-webkit-keyframes pulse {
   to {
     box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
@@ -912,9 +455,6 @@ input:focus {
 .faq-sec .panel-content {
   padding-left: 20px;
 }
-.faq-thumb {
-  margin-top: 40px;
-}
 .faq-sec .panel {
   border: none;
   border-radius: 0;
@@ -922,9 +462,6 @@ input:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
   background: transparent;
   color: var(--text-color-light);
-}
-.faq-sec.faq-page-sec .panel-heading {
-  padding: 0px;
 }
 .faq-sec .panel-heading a {
   margin-bottom: 0px;
@@ -955,11 +492,6 @@ input:focus {
   font-weight: bold;
   font-size: 24px;
   color: var(--text-color-subtle);
-}
-.faq-sec.faq-page-sec {
-  overflow: visible;
-  padding: 0;
-  background: none;
 }
 .faq-sec .panel-group .panel-heading {
   border-bottom: 0;
@@ -1011,29 +543,9 @@ input:focus {
 .sec-title p {
   margin-bottom: 20px;
 }
-
 /*
 8. About Service sec
 ============================*/
-.service-tab li a {
-  background: var(--primary-color);
-  padding: 12px 16px;
-  display: inline-block;
-  font-weight: 600;
-  color: var(--text-color-light);
-  position: relative;
-  margin: 6px 0px;
-  transition: none;
-  width: 100%;
-}
-.service-tab li.active a {
-  background: var(--primary-color);
-  text-decoration: none;
-  transition: none;
-}
-.service-tab li a i {
-  margin-right: 10px;
-}
 /*
 9.Service Section
 ============================*/
@@ -1069,15 +581,6 @@ input:focus {
 .service-content p {
   margin-top: 15px;
 }
-.service-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 100%;
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.4s ease 0s;
-}
 .service-item .inner h2 {
   font-size: 20px;
   margin-top: 0;
@@ -1091,9 +594,6 @@ input:focus {
 .service-icon i {
   color: var(--text-color-light);
   font-size: 24px;
-}
-.service-details-img {
-  margin-bottom: 30px;
 }
 /*
 10.Pricing Package Section
@@ -1152,11 +652,6 @@ input:focus {
   margin: 0px auto;
   z-index: -1;
 }
-.price-heading.price-bg h2,
-.price-heading.price-bg span {
-  color: var(--text-color-light);
-  position: relative;
-}
 .price-heading h2 {
   color: var(--text-color-light);
   display: inline-block;
@@ -1168,18 +663,6 @@ input:focus {
   box-shadow: 0 0 4px 1px var(--border-color-light);
   margin-bottom: 30px;
   background: var(--text-color-light);
-}
-.pakage-icon i {
-  background: var(--primary-color) none repeat scroll 0 0;
-  border-radius: 100%;
-  color: var(--text-color-light);
-  font-size: 40px;
-  height: 80px;
-  line-height: 80px;
-  position: absolute;
-  top: -34px;
-  transform: translateX(-50%);
-  width: 80px;
 }
 .sngl-price h1 {
   color: var(--text-color-light);
@@ -1217,192 +700,21 @@ input:focus {
   overflow: hidden;
   color: var(--text-color-light);
 }
-
 /*
 12. Project Details Page Section
 =================================*/
-.details-text img {
-  margin-bottom: 20px;
-}
-.details-text h2 a,
-.project-details-info h2 {
-  color: var(--primary-color);
-  font-size: 24px;
-}
-.details-text h2,
-.related-project h2 {
-  font-size: 22px;
-}
-.project-details-info ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 6px 0;
-}
-.project-details-info ul li span {
-  float: right;
-}
-.project-details-info {
-  padding: 50px 40px;
-}
-.service-details-img img {
-  width: 100%;
-}
-.details-text h2,
-.related-project h2 {
-  font-size: 22px;
-}
-.project-details-info ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 6px 0;
-}
-.project-details-info ul li span {
-  float: right;
-}
-.project-details-info {
-  padding: 50px 40px;
-}
 /*
 13.Service Details Section
 ============================*/
-.service-details h2 a,
-.service-details-text h2,
-.contact-field.service-details h2,
-.brochures h2 {
-  color: var(--primary-color);
-  font-size: 24px;
-  font-weight: 600;
-}
-.service-details-text {
-  margin-top: 40px;
-}
-.service-details ul li {
-  display: inline-block;
-  width: 100%;
-  margin-top: 5px;
-  position: relative;
-}
-.service-details ul li:before {
-  content: "\f101";
-  font-family: fontawesome;
-  left: 0px;
-  top: 0px;
-  position: relative;
-  color: var(--text-color-light);
-  padding-right: 10px;
-}
-.appointment-sec {
-  margin-top: 25px;
-}
-.brochures li:first-child::before {
-  content: "\f1c1";
-  font-family: fontawesome;
-  left: 0px;
-  top: 0px;
-  position: relative;
-  color: var(--text-color-light);
-  padding-right: 10px;
-}
-.brochures li:last-child::before {
-  content: "\f0f6";
-  font-family: fontawesome;
-  left: 0px;
-  top: 0px;
-  position: relative;
-  color: var(--text-color-light);
-  padding-right: 10px;
-}
-.brochures li {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 20px;
-  position: relative;
-  background: var(--secondary-color);
-  margin-bottom: 5px;
-}
-.brochures li a {
-  color: var(--text-color-light);
-  font-weight: 600;
-  font-size: 14px;
-}
-.brochures li:hover {
-  background: var(--primary-color);
-}
-.brochures li:hover a {
-  color: var(--text-color-light);
-}
-.brochures li:hover::before {
-  color: var(--text-color-light);
-}
-.brochures li:hover i {
-  color: var(--text-color-light);
-}
-
-.brochures li a span {
-  float: right;
-  color: var(--text-color-light);
-}
-.about-service-tab {
-  margin-bottom: 40px;
-}
 /*
 14.Count Up Section 
 ======================*/
-.count-up-sec {
-  background: var(--primary-color) none repeat scroll 0 0;
-  padding: 100px 0;
-}
-.counting_sl:last-child:before {
-  display: none;
-  content: none;
-}
-.counting_sl::before {
-  position: absolute;
-  content: "";
-  border-right: 1px solid var(--border-color-secondary);
-  height: 100%;
-  right: -15px;
-}
-.counting_sl {
-  text-align: center;
-  position: relative;
-}
-.countup-icon {
-  display: inline-block;
-  height: 70px;
-  margin-bottom: 16px;
-  text-align: center;
-  width: 70px;
-}
-.counting_sl h2 {
-  color: var(--secondary-color);
-  font-size: 48px;
-  text-transform: uppercase;
-}
-.counting_sl h4 {
-  color: var(--text-color-light);
-  font-size: 22px;
-  margin-bottom: 0;
-  font-weight: 400;
-}
-
 /*
 17.Testimonial Section
 =========================*/
 .testimonial-sec {
   background-color: var(--background-color-secondary);
 }
-.all-testimonial .owl-controls {
-  bottom: -30px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-.all-testimonial .owl-controls .owl-buttons div {
-  background: none;
-  opacity: 1;
-}
-
 .client-thumb {
   height: auto;
   width: 200px;
@@ -1410,11 +722,6 @@ input:focus {
 .all-testimonial {
   text-align: center;
   padding-bottom: 20px;
-}
-.all-testimonial.owl-carousel .owl-item .client-signature img {
-  margin-bottom: 20px;
-  width: auto;
-  height: auto;
 }
 .client-comment h2 {
   font-size: 18px;
@@ -1451,22 +758,6 @@ input:focus {
   transition: all 0.4s ease-in-out 0s;
   color: var(--text-color-light);
 }
-.client-sec .owl-controls {
-  display: none;
-}
-
-.all-testimonial.owl-carousel.owl-theme .owl-dot {
-  display: inline-block;
-  height: 2px;
-  margin: 0 5px;
-  width: 30px;
-  position: relative;
-  background: var(--text-color-light);
-}
-.all-testimonial.owl-carousel.owl-theme .owl-dot.active {
-  background: var(--secondary-color) none repeat scroll 0 0;
-}
-
 /*
 18.Page Heading Section
 ==========================*/
@@ -1486,35 +777,6 @@ input:focus {
   letter-spacing: 0.2rem;
   font-weight: bold;
   color: var(--text-color-light);
-}
-.breadcrumb-list {
-  text-align: center;
-}
-.breadcrumb-list li {
-  display: inline-block;
-  position: relative;
-  padding: 0px 14px;
-}
-.breadcrumb-list li a {
-  font-weight: 600;
-  color: var(--text-color-light);
-}
-.breadcrumb-list li:last-child a {
-  color: var(--secondary-color);
-}
-.breadcrumb-list li::before {
-  content: "-";
-  position: absolute;
-  right: -8px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color-light);
-}
-.breadcrumb-list li:last-child::before {
-  display: none;
-}
-.breadcrumb-list li:last-child::before {
-  display: none;
 }
 /*
 19.Team section
@@ -1617,26 +879,9 @@ input:focus {
   transform: translateY(100px);
   transition-delay: 0.5s;
 }
-
 .team-member li i {
   color: var(--text-color-light);
 }
-.testimonial-text.expert-team {
-  position: relative;
-  padding-bottom: 70px;
-}
-.testimonial-text.expert-team::before {
-  position: absolute;
-  content: "";
-  background-image: url(../img/team_sec_bg.png);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -165px;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
 /*
 21.Contact Page
 ============================*/
@@ -1651,17 +896,6 @@ input:focus {
 }
 .contact-field .col-md-6.col-sm-6.col-xs-12 {
   padding-left: 0;
-}
-.contact-field.contact-form input {
-  margin-bottom: 5px;
-}
-.contact-field.contact-form textarea {
-  height: 110px;
-}
-.contact-field.contact-form input[type="submit"] {
-  background: var(--primary-color);
-  width: 150px;
-  border-color: var(--primary-color);
 }
 .contact-info-icon i {
   font-size: 30px;
@@ -1683,7 +917,6 @@ input:focus {
   display: inline-block;
   width: 100%;
 }
-
 .contact-field input {
   background: var(--text-color-light) none repeat scroll 0 0;
   border: 1px solid var(--background-color-tertiary);
@@ -1697,10 +930,6 @@ input:focus {
   border: 1px solid var(--background-color-tertiary);
   padding: 12px 20px;
   margin-bottom: 20px;
-  color: var(--text-color-subtle);
-}
-.contact-field .select-arrow::before {
-  top: 15px;
   color: var(--text-color-subtle);
 }
 .contact-field .message-input {
@@ -1744,22 +973,14 @@ input:focus {
   width: 100%;
   margin-top: 30px;
 }
-
 .contact-page-map {
   width: 100%;
   height: 350px;
   margin-bottom: 70px;
 }
-
 /*
 22.Call To Action Section
 ============================*/
-.footer-call-to-action {
-  position: absolute;
-  top: -80px;
-  width: 100%;
-  z-index: 999;
-}
 .call-to-action-sec {
   background-color: var(--secondary-color);
   background-image: url("../img/stock/shot-of-a-yellow-an-gray-payphone-2025-02-02-13-59-39-utc.jpeg");
@@ -1809,45 +1030,9 @@ input:focus {
   transition: all 0.4s ease-in-out 0s;
   color: var(--primary-color);
 }
-
 /*
 23.404 Page Section 
 ======================*/
-.error-page-content {
-  text-align: center;
-  padding: 0px 50px;
-}
-.error-page-content h1 {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 60px;
-  text-align: center;
-}
-.error-page-content > a {
-  color: var(--text-color-light);
-  font-weight: 600;
-  background: var(--primary-color);
-  padding: 12px 34px;
-  display: inline-block;
-  margin-top: 20px;
-  border-radius: 30px;
-}
-.error-page-content ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 4px 0;
-  position: relative;
-}
-.error-page-content ul li::before {
-  content: "\f101";
-  font-family: fontawesome;
-  left: 0px;
-  top: 0px;
-  position: relative;
-  color: var(--primary-color);
-  padding-right: 10px;
-}
-
 /*
 24.Footer Section 
 ======================*/
@@ -1873,7 +1058,6 @@ footer.footer {
   margin-bottom: 20px;
   margin-top: -30px;
 }
-
 .footer-widget-one i:hover {
   background: var(--primary-color);
   color: var(--text-color-light);
@@ -1908,74 +1092,6 @@ footer.footer {
   margin-right: 0;
   color: var(--text-color-light);
 }
-.footer-recent-inner .media {
-  padding-bottom: 10px;
-}
-.footer-recent-inner .media:last-child {
-  border-bottom: 0;
-}
-.footer-recent-inner {
-  margin-bottom: 30px;
-}
-.footer-recent-inner-img {
-  width: 58px;
-  height: 60px;
-}
-.footer-recent-inner h2 {
-  margin-bottom: 4px;
-  padding-bottom: 0;
-}
-.footer-recent-inner h2 a {
-  color: var(--text-color-light);
-  font-size: 16px;
-  font-weight: 600;
-}
-.footer-recent-inner h2 a:hover {
-  color: var(--secondary-color-lighter);
-  transition: all 0.5s ease-out 0s;
-}
-.footer-recent-inner span {
-  color: var(--border-color-light);
-  font-size: 14px;
-}
-.footer-widget-three li i {
-  display: inline-block;
-  margin-right: 10px;
-}
-.ft-menu ul {
-  padding: 0px 20px;
-}
-.ft-menu h2 {
-  display: inline-block;
-  text-align: left;
-}
-.footer-widget-three li {
-  color: var(--text-color-subtle);
-  font-size: 14px;
-  padding: 10px;
-}
-.footer-widget-two li {
-  display: inline-block;
-}
-.footer-widget-two li a {
-  border: 1px solid var(--border-color-light);
-  color: var(--text-color-light);
-  display: inline-block;
-  margin: 8px 8px 8px 0;
-  padding: 8px 10px;
-  transition: all 0.4s ease-in-out 0s;
-  background: transparent;
-  color: var(--border-color-light);
-}
-.footer-widget-two li a:hover {
-  transition: all 0.4s ease-in-out 0s;
-  background: var(--primary-color);
-  color: var(--text-color-light);
-  border-color: var(--primary-color);
-}
-.footer-widget-two li a i {
-  margin-right: 10px;
-}
 .footer-widget-menu li:before {
   content: "\f101";
   font-family: fontawesome;
@@ -2001,28 +1117,6 @@ footer.footer {
   padding: 15px 0;
   background: var(--background-color-dark);
 }
-.footer-social {
-  text-align: right;
-}
-.footer-social ul li {
-  display: inline-block;
-}
-.footer-social ul li i {
-  color: var(--text-color-light);
-  float: left;
-  font-size: 18px;
-  height: 40px;
-  line-height: 40px;
-  margin-right: 10px;
-  text-align: center;
-  width: 40px;
-  transition: all 0.4s ease-in-out 0s;
-  border-radius: 100%;
-  background: var(--primary-color);
-}
-.footer-social ul li i:hover {
-  background: var(--primary-color);
-}
 .copy-right {
   margin-top: 8px;
 }
@@ -2031,15 +1125,12 @@ footer.footer {
   margin: 0;
   text-align: left;
 }
-.copy-right span,
-.copy-right span a {
+.copy-right span, .copy-right span a {
   color: var(--secondary-color);
 }
-
 /*
 24.Why Choose Us Section 
 ======================*/
-
 .why-choose-thumb {
   position: relative;
   overflow: hidden;
@@ -2124,11 +1215,7 @@ footer.footer {
   box-shadow: 0 0 29px 1px var(--border-color-light);
   transition: all 0.4s ease 0s;
 } */
-.why-choose-inner.why-choose-inner2 {
-  padding-top: 70px;
-}
 /* The End */
-
 /* Visueel verbergen zonder display:none zodat bots het veld nog in de DOM zien.
      Deze regels zijn specifiek voor .honeypot en raken geen andere classes. */
 .honeypot {
@@ -2143,8 +1230,271 @@ footer.footer {
   padding: 0;
   margin: 0;
 }
-
 .contact-field .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+/* Responsive rules merged from responsive.css */
+
+@media only screen and (min-width: 992px) and (max-width: 5000px) {
+.team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(4n + 1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.main-menu ul li a {
+    padding: 40px 6px;
+  }
+.slider-wrapper {
+    width: 100%;
+  }
+.slider-text h1 {
+    font-size: 48px;
+  }
+.appointment-button a {
+    padding: 12px 14px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+h1 {
+    font-size: 22px;
+  }
+h2 {
+    font-size: 18px;
+  }
+h3 {
+    font-size: 16px;
+  }
+.pt-100 {
+    padding-top: 80px;
+  }
+.pb-100 {
+    padding-bottom: 80px;
+  }
+.pb-70 {
+    padding-bottom: 40px;
+  }
+.logo {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+.sngl-price {
+    margin-bottom: 30px;
+  }
+.team-member::after {
+    height: 38%;
+  }
+.header-left li {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+  }
+.main-menu ul li a {
+    padding: 34px 4px;
+  }
+.main-menu {
+    text-align: center;
+  }
+.slider-text {
+    width: 767px;
+  }
+.slider-text h1 {
+    font-size: 36px;
+  }
+.main-menu ul ul {
+    top: 92px;
+  }
+.sec-title {
+    text-align: center;
+    margin: 0 0px 50px 0px;
+  }
+.service-item .col-md-4.col-sm-6:nth-child(2n + 1) {
+    clear: both;
+  }
+.footer-widget-menu {
+    margin-bottom: 30px;
+  }
+.call-to-action-text h2 {
+    font-size: 24px;
+  }
+.team-sec .col-md-3.col-sm-6.col-xs-12:nth-child(2n + 1) {
+    clear: both;
+  }
+.slider-wrapper {
+    width: 100%;
+  }
+.faq-title {
+    font-size: 28px;
+  }
+.faq-sec .panel-heading a {
+    font-size: 18px;
+  }
+.faq-sec .panel-title a::before {
+    font-size: 18px;
+  }
+.about-desc h1 {
+    font-size: 28px;
+  }
+.sec-title h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+body {
+    font-size: 14px;
+    line-height: 24px;
+  }
+h1 {
+    font-size: 22px;
+  }
+h2 {
+    font-size: 18px;
+  }
+h3 {
+    font-size: 16px;
+  }
+.sec-title h1 {
+    font-size: 24px;
+  }
+.why-choose-thumb img {
+    width: 100%;
+  }
+.sngl-price {
+    margin-bottom: 50px;
+  }
+.slider-wrapper, .slider-caption {
+    width: 100%;
+  }
+.slider-text {
+    width: 100%;
+  }
+.pt-100 {
+    padding-top: 80px;
+  }
+.pb-100 {
+    padding-top: 80px;
+  }
+.pb-70 {
+    padding-top: 40px;
+  }
+.appointment-button {
+    display: none;
+  }
+.slider-text p {
+    width: 100%;
+  }
+.header-left {
+    text-align: center;
+  }
+.about-desc h1 {
+    font-size: 32px;
+  }
+.slider-text {
+    padding: 0 30px;
+  }
+.hd-sec {
+    padding-top: 24px;
+    position: relative;
+  }
+.logo {
+    text-align: left;
+    padding: 0;
+    position: relative;
+    z-index: 99;
+  }
+.slider-text h1 {
+    font-size: 34px;
+  }
+.team-member::after {
+    height: 38%;
+  }
+.slider-text li a {
+    margin-bottom: 20px;
+  }
+.pagehding-sec {
+    padding: 80px 0;
+  }
+.page-heading h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+.sec-title {
+    text-align: center;
+    margin: 0 0px 50px 0px;
+  }
+.footer-sec .col-md-3.col-sm-6 {
+    margin: 40px 0;
+  }
+.footer-bottom-sec p {
+    text-align: center;
+  }
+.call-to-action-text {
+    text-align: center;
+  }
+.call-to-action-text a.btn {
+    float: none;
+    margin-top: 20px;
+  }
+.single-testimonial {
+    width: 100%;
+  }
+.header-left li {
+    border-left: inherit;
+  }
+.header-left li:last-child {
+    border-right: inherit;
+  }
+.faq-sec .panel-heading a {
+    font-size: 18px;
+  }
+.faq-sec .panel-title a::before {
+    font-size: 18px;
+  }
+.about-desc h1 {
+    font-size: 28px;
+  }
+.sec-title h1 {
+    font-size: 32px;
+  }
+.price-box span.amount {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 515px) and (max-width: 767px) {
+.team-member::after {
+    height: 42%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 492px) {
+.header-left {
+    text-align: center;
+  }
+.header-left li {
+    margin: 10px 0;
+  }
+.slider-text h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+.slider-text ul {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+.header-left li {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 390px) {
+.sec-title h1 {
+    font-size: 28px;
+  }
 }
