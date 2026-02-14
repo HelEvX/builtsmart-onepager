@@ -100,7 +100,7 @@
       var(--ui-hero-bg-overlay-end) 100%
     ),
     linear-gradient(45deg, var(--ui-hero-bg-start) 0%, var(--ui-hero-bg-mid) 52%, var(--ui-hero-bg-end) 100%);
-  padding: 188px 0 84px;
+  padding: 210px 0 84px;
 }
 
 .hero-product-dark::after {

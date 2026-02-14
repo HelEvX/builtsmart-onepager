@@ -84,11 +84,6 @@
 }
 
 .faq-banner-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--ui-fs-button);
-  padding: 14px 24px;
   white-space: nowrap;
 }
 

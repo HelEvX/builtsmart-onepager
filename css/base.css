@@ -177,6 +177,8 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
+  padding: 14px 24px;
   font-family: var(--font-primary);
   font-size: var(--ui-fs-button);
   font-weight: var(--ui-btn-font-weight);
@@ -185,6 +187,8 @@ a:hover {
   line-height: var(--ui-btn-line-height);
   text-transform: uppercase;
   text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
   border: 1px solid var(--btn-border);
   background: var(--btn-bg);
   color: var(--btn-text);
