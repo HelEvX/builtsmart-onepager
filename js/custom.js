@@ -356,9 +356,58 @@ const initContactForm = () => {
   const forms = document.querySelectorAll("form[data-contact-form]");
   if (!forms.length) return;
 
+  const getFallbackFrame = () => {
+    let frame = document.querySelector("iframe[name='netlify-form-fallback-frame']");
+    if (frame) return frame;
+
+    frame = document.createElement("iframe");
+    frame.name = "netlify-form-fallback-frame";
+    frame.title = "Form submit fallback";
+    frame.hidden = true;
+    document.body.appendChild(frame);
+    return frame;
+  };
+
+  const submitWithIframeFallback = (form) => {
+    const fallbackFrame = getFallbackFrame();
+    const previousTarget = form.getAttribute("target");
+
+    return new Promise((resolve, reject) => {
+      let settled = false;
+      const timeoutId = window.setTimeout(() => {
+        if (settled) return;
+        settled = true;
+        cleanup();
+        reject(new Error("Iframe fallback timeout"));
+      }, 8000);
+
+      const handleLoad = () => {
+        if (settled) return;
+        settled = true;
+        cleanup();
+        resolve();
+      };
+
+      const cleanup = () => {
+        fallbackFrame.removeEventListener("load", handleLoad);
+        window.clearTimeout(timeoutId);
+        if (previousTarget) {
+          form.setAttribute("target", previousTarget);
+        } else {
+          form.removeAttribute("target");
+        }
+      };
+
+      fallbackFrame.addEventListener("load", handleLoad, { once: true });
+      form.setAttribute("target", fallbackFrame.name);
+      form.submit();
+    });
+  };
+
   forms.forEach((form) => {
     const submitButton = form.querySelector("input[type='submit'], button[type='submit']");
     const feedback = form.querySelector("[data-form-feedback]");
+    let isSubmitting = false;
 
     const setFeedback = (type, message) => {
       if (!feedback) return;
@@ -384,15 +433,19 @@ const initContactForm = () => {
     form.addEventListener("change", clearFeedbackOnInteraction);
 
     form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
+
       if (!form.checkValidity()) {
-        event.preventDefault();
         form.reportValidity();
         return;
       }
 
       setFeedback("", "");
-
-      event.preventDefault();
+      isSubmitting = true;
 
       if (submitButton) {
         submitButton.disabled = true;
@@ -405,7 +458,8 @@ const initContactForm = () => {
           encodedData.append(key, String(value));
         });
 
-        const response = await fetch("/", {
+        const submitEndpoint = form.getAttribute("action") || window.location.pathname || "/";
+        const response = await fetch(submitEndpoint, {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -420,8 +474,15 @@ const initContactForm = () => {
         form.reset();
         setFeedback("success", "Bedankt! Je bericht is verzonden.");
       } catch (_) {
-        setFeedback("error", "Verzenden lukt nu niet. Probeer opnieuw of mail naar info@builtsmart.be.");
+        try {
+          await submitWithIframeFallback(form);
+          form.reset();
+          setFeedback("success", "Bedankt! Je bericht is verzonden.");
+        } catch (_) {
+          setFeedback("error", "Verzenden lukt nu niet. Probeer opnieuw of mail naar info@builtsmart.be.");
+        }
       } finally {
+        isSubmitting = false;
         if (submitButton) {
           submitButton.disabled = false;
         }
