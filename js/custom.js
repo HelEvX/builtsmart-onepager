@@ -424,6 +424,26 @@ const initContactForm = () => {
       feedback.hidden = false;
     };
 
+    const setMailtoErrorFeedback = () => {
+      if (!feedback) return;
+      feedback.classList.remove("is-success", "is-error");
+      feedback.classList.add("is-error");
+      feedback.hidden = false;
+      feedback.textContent = "";
+
+      const emailAddress = "builtsmart.info@gmail.com";
+      const messageText = `Verzenden lukt momenteel niet. Probeer opnieuw of mail naar ${emailAddress}.`;
+      const messagePrefix = "Verzenden lukt momenteel niet. Probeer opnieuw of mail naar ";
+
+      const mailLink = document.createElement("a");
+      mailLink.href = `mailto:${emailAddress}`;
+      mailLink.textContent = emailAddress;
+      mailLink.setAttribute("aria-label", `Mail naar ${emailAddress}`);
+
+      feedback.setAttribute("aria-label", messageText);
+      feedback.append(messagePrefix, mailLink, ".");
+    };
+
     const clearFeedbackOnInteraction = () => {
       if (!feedback || feedback.hidden) return;
       setFeedback("", "");
@@ -476,12 +496,10 @@ const initContactForm = () => {
       } catch (_) {
         try {
           await submitWithIframeFallback(form);
-          setFeedback(
-            "error",
-            "We konden je verzending niet bevestigen door een verbindingsprobleem. Controleer Netlify Forms of probeer opnieuw.",
-          );
+          form.reset();
+          setFeedback("success", "Bedankt! Je bericht is verzonden.");
         } catch (_) {
-          setFeedback("error", "Verzenden lukt nu niet. Probeer opnieuw of mail naar info@builtsmart.be.");
+          setMailtoErrorFeedback();
         }
       } finally {
         isSubmitting = false;

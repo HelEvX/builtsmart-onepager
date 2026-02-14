@@ -12,7 +12,7 @@ Dit document is een voorlopige versie en wordt verder juridisch verfijnd.
 
 BuiltSmart  
 Hasselt, België  
-E-mail: info@builtsmart.be
+E-mail: <a href="mailto:builtsmart.info@gmail.com">builtsmart.info@gmail.com</a>
 
 BuiltSmart is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit beleid.
 
@@ -76,7 +76,7 @@ Je hebt het recht om:
 - Beperking van verwerking te vragen
 - Bezwaar te maken tegen verwerking
 
-Je kan hiervoor contact opnemen via info@builtsmart.be.
+Je kan hiervoor contact opnemen via <a href="mailto:builtsmart.info@gmail.com">builtsmart.info@gmail.com</a>.
 
 ---
 
@@ -208,4 +208,4 @@ Dit document zal dan worden uitgebreid met:
 
 ---
 
-Voor vragen over privacy of gegevensbescherming kan je contact opnemen via info@builtsmart.be.
+Voor vragen over privacy of gegevensbescherming kan je contact opnemen via <a href="mailto:builtsmart.info@gmail.com">builtsmart.info@gmail.com</a>.
