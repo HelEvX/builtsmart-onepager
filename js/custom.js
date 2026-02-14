@@ -6,6 +6,7 @@ const normalizePath = (path) => {
 };
 
 const PARTIAL_CACHE_PREFIX = "bs:partial:";
+const COOKIE_DISMISS_KEY = "bs:cookie-banner:dismissed";
 
 const getPartialCacheKey = (includePath) => `${PARTIAL_CACHE_PREFIX}${includePath}`;
 
@@ -295,11 +296,66 @@ const initSponsorsBanner = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
+const initCookieBanner = () => {
+  const banner = document.querySelector("[data-cookie-banner]");
+  if (!banner) return;
+
+  const dismissed = localStorage.getItem(COOKIE_DISMISS_KEY) === "1";
+  if (dismissed) return;
+
+  banner.hidden = false;
+  requestAnimationFrame(() => banner.classList.add("is-visible"));
+
+  const dismissButton = banner.querySelector("[data-cookie-dismiss]");
+  if (!dismissButton) return;
+
+  dismissButton.addEventListener("click", () => {
+    localStorage.setItem(COOKIE_DISMISS_KEY, "1");
+    banner.classList.remove("is-visible");
+    window.setTimeout(() => {
+      banner.hidden = true;
+    }, 260);
+  });
+};
+
+const initMapConsent = () => {
+  const mapLoadButtons = document.querySelectorAll("[data-map-load]");
+  if (!mapLoadButtons.length) return;
+
+  mapLoadButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mapSrc = button.getAttribute("data-map-src");
+      if (!mapSrc) return;
+
+      const wrapper = button.closest("[data-map-consent]");
+      if (!wrapper) return;
+
+      const iframe = document.createElement("iframe");
+      iframe.width = "100%";
+      iframe.height = "400";
+      iframe.src = mapSrc;
+      iframe.frameBorder = "0";
+      iframe.scrolling = "no";
+      iframe.marginHeight = "0";
+      iframe.marginWidth = "0";
+      iframe.allowFullscreen = true;
+      iframe.loading = "lazy";
+      iframe.referrerPolicy = "no-referrer-when-downgrade";
+
+      wrapper.replaceWith(iframe);
+    });
+  });
+};
+
+const bootstrap = async () => {
   const includePaths = await loadPartials();
   initMobileMenu();
   initFaqAccordion();
   initSmoothScroll();
   initSponsorsBanner();
+  initCookieBanner();
+  initMapConsent();
   refreshPartialsInBackground(includePaths);
-});
+};
+
+bootstrap();

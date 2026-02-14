@@ -48,22 +48,15 @@
         <div class="row">
           <div class="col-md-8">
             <div class="contact-page-map">
-              <!-- Google Maps -->
-              <div class="mapouter">
-                <div class="gmap_canvas">
-                  <iframe
-                    width="100%"
-                    height="400"
-                    id="gmap_canvas"
-                    src="https://www.google.com/maps?q=Corda+Campus,+Kempische+Steenweg,+Hasselt,+Belgium&output=embed"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+              <div class="map-consent" data-map-consent>
+                <p>Om de kaart te tonen, laden we Google Maps (een externe dienst die cookies kan plaatsen).</p>
+                <button
+                  type="button"
+                  class="btn btn--primary btn--outlined map-consent-btn"
+                  data-map-load
+                  data-map-src="https://www.google.com/maps?q=Corda+Campus,+Kempische+Steenweg,+Hasselt,+Belgium&output=embed">
+                  Kaart laden
+                </button>
               </div>
             </div>
             <div class="contact-field">
@@ -113,6 +106,17 @@
                   <div class="col-md-12 message-input">
                     <div class="single-input-field">
                       <textarea name="bericht" placeholder="Bericht" rows="5" required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="privacy-consent-wrap">
+                      <label class="privacy-consent-label" for="privacy-consent">
+                        <input id="privacy-consent" name="privacy_consent" type="checkbox" required />
+                        Ik ga akkoord met het
+                        <a href="privacybeleid.html" target="_blank" rel="noopener noreferrer">privacybeleid</a>
+                        en de verwerking van mijn gegevens om mijn aanvraag te behandelen.
+                      </label>
                     </div>
                   </div>
 

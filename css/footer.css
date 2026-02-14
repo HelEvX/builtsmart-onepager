@@ -23,18 +23,21 @@ footer.footer {
   margin-top: 0;
   max-width: 180px;
 }
-.footer-widget-menu li:before {
-  content: "›";
-  left: 0px;
-  top: 0px;
-  position: relative;
-  color: var(--brand-metal-start);
-  padding-right: 10px;
-}
 .footer-widget-menu li {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   margin-bottom: 6px;
 }
+
+.footer-link-icon {
+  color: var(--brand-accent);
+  font-size: 16px;
+  line-height: 1.35;
+  margin-top: 1px;
+  flex: 0 0 auto;
+}
+
 .footer-widget-menu li a {
   color: var(--n-200);
   padding-bottom: 6px;
@@ -77,4 +80,82 @@ footer.footer {
 .footer-bottom-note p {
   text-align: right;
   color: var(--n-400);
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 200;
+  transform: translateY(14px);
+  opacity: 0;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.cookie-banner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-banner-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(12, 10, 9, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+  border-radius: var(--ui-radius-sm);
+  padding: 12px 14px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  color: var(--n-100);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.cookie-banner p a {
+  color: var(--brand-accent);
+  text-decoration: underline;
+}
+
+.cookie-banner-close {
+  border: 1px solid var(--border-color-light);
+  background: transparent;
+  color: var(--n-100);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 10px 12px;
+  border-radius: var(--ui-radius-sm);
+}
+
+.cookie-banner-close:hover,
+.cookie-banner-close:focus-visible {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+}
+
+@media only screen and (max-width: 767px) {
+  .cookie-banner {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .cookie-banner-inner {
+    display: block;
+  }
+
+  .cookie-banner-close {
+    margin-top: 10px;
+    width: 100%;
+  }
 }
