@@ -352,6 +352,89 @@ const initMapConsent = () => {
   });
 };
 
+const initContactForm = () => {
+  const forms = document.querySelectorAll("form[data-contact-form]");
+  if (!forms.length) return;
+
+  const isLocalDevHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+  forms.forEach((form) => {
+    const submitButton = form.querySelector("input[type='submit'], button[type='submit']");
+    const feedback = form.querySelector("[data-form-feedback]");
+
+    const setFeedback = (type, message) => {
+      if (!feedback) return;
+      feedback.classList.remove("is-success", "is-error");
+
+      if (!message) {
+        feedback.hidden = true;
+        feedback.textContent = "";
+        return;
+      }
+
+      feedback.textContent = message;
+      feedback.classList.add(type === "success" ? "is-success" : "is-error");
+      feedback.hidden = false;
+    };
+
+    const clearFeedbackOnInteraction = () => {
+      if (!feedback || feedback.hidden) return;
+      setFeedback("", "");
+    };
+
+    form.addEventListener("input", clearFeedbackOnInteraction);
+    form.addEventListener("change", clearFeedbackOnInteraction);
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      setFeedback("", "");
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        if (isLocalDevHost) {
+          await new Promise((resolve) => window.setTimeout(resolve, 220));
+        } else {
+          const formData = new FormData(form);
+          const encodedData = new URLSearchParams();
+          formData.forEach((value, key) => {
+            encodedData.append(key, String(value));
+          });
+
+          const response = await fetch("/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: encodedData.toString(),
+          });
+
+          if (!response.ok) {
+            throw new Error("Form submission failed");
+          }
+        }
+
+        form.reset();
+        setFeedback("success", "Bedankt! Je bericht is verzonden.");
+      } catch (_) {
+        setFeedback("error", "Verzenden lukt nu niet. Probeer opnieuw of mail naar info@builtsmart.be.");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
+    });
+  });
+};
+
 const bootstrap = async () => {
   const includePaths = await loadPartials();
   initMobileMenu();
@@ -360,6 +443,7 @@ const bootstrap = async () => {
   initSponsorsBanner();
   initCookieBanner();
   initMapConsent();
+  initContactForm();
   refreshPartialsInBackground(includePaths);
 };
 

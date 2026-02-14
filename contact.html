@@ -70,6 +70,7 @@
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                data-contact-form
                 netlify
                 netlify-honeypot="bot-field"
                 action="/bedankt.html">
@@ -127,6 +128,10 @@
 
                   <div class="single-input-fieldsbtn">
                     <input type="submit" value="Verzenden" class="btn btn--primary btn--filled" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <p class="contact-form-feedback" data-form-feedback role="status" aria-live="polite" hidden></p>
                   </div>
                 </div>
               </form>

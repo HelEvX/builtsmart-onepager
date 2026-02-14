@@ -85,6 +85,29 @@
   margin-top: 16px;
   font-size: var(--ui-fs-button);
 }
+
+.contact-form-feedback {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-muted-bg);
+  color: var(--text-color-primary);
+  line-height: 1.45;
+}
+
+.contact-form-feedback.is-success {
+  border-color: var(--success-color);
+}
+
+.contact-form-feedback.is-error {
+  border-color: var(--error-color);
+}
+
+.single-input-fieldsbtn .btn[disabled] {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
 .contact-field {
   display: block;
   width: 100%;
