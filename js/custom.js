@@ -357,6 +357,7 @@ const initContactForm = () => {
   if (!forms.length) return;
 
   const isLocalDevHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  if (!isLocalDevHost) return;
 
   forms.forEach((form) => {
     const submitButton = form.querySelector("input[type='submit'], button[type='submit']");
@@ -386,41 +387,22 @@ const initContactForm = () => {
     form.addEventListener("change", clearFeedbackOnInteraction);
 
     form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
       if (!form.checkValidity()) {
+        event.preventDefault();
         form.reportValidity();
         return;
       }
 
       setFeedback("", "");
 
+      event.preventDefault();
+
       if (submitButton) {
         submitButton.disabled = true;
       }
 
       try {
-        if (isLocalDevHost) {
-          await new Promise((resolve) => window.setTimeout(resolve, 220));
-        } else {
-          const formData = new FormData(form);
-          const encodedData = new URLSearchParams();
-          formData.forEach((value, key) => {
-            encodedData.append(key, String(value));
-          });
-
-          const response = await fetch("/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: encodedData.toString(),
-          });
-
-          if (!response.ok) {
-            throw new Error("Form submission failed");
-          }
-        }
+        await new Promise((resolve) => window.setTimeout(resolve, 220));
 
         form.reset();
         setFeedback("success", "Bedankt! Je bericht is verzonden.");
