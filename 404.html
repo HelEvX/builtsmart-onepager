@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BuiltSmart | Pagina niet gevonden" />
+    <title>BuiltSmart | 404</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo/favicon-light.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="img/logo/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/x-icon" href="img/logo/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/remixicon.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      body.page-404 {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--background-color-secondary);
+        color: var(--text-color-primary);
+      }
+
+      .page-404-card {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        background: var(--background-color-primary);
+        border: 1px solid var(--border-color-light);
+        box-shadow: 0 10px 24px var(--background-color-tertiary);
+        padding: 36px 30px;
+        text-align: center;
+      }
+
+      .page-404-logo {
+        width: 220px;
+        height: 56px;
+        margin: 0 auto 18px;
+        display: block;
+      }
+
+      .page-404-code {
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 8px;
+      }
+
+      .page-404-card h1 {
+        margin: 0 0 14px;
+      }
+
+      .page-404-card p {
+        margin: 0 0 22px;
+        color: var(--text-color-secondary);
+      }
+
+      .page-404-actions {
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .page-404-card {
+          margin: 0 12px;
+          padding: 30px 20px;
+        }
+
+        .page-404-actions {
+          width: 100%;
+        }
+
+        .page-404-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="page-404">
+    <main class="container">
+      <section class="page-404-card">
+        <img class="page-404-logo" src="img/logo/bs-logo.svg" alt="BuiltSmart" />
+        <p class="page-404-code">404</p>
+        <h1>Pagina niet gevonden</h1>
+        <p>De pagina die je zoekt bestaat niet (meer) of werd verplaatst.</p>
+        <div class="page-404-actions">
+          <a href="index.html" class="btn btn--primary btn--filled">Terug naar home</a>
+          <a href="contact.html" class="btn btn--secondary btn--outlined">Contact</a>
+          <a href="javascript:history.back()" class="btn btn--secondary btn--outlined">Ga terug</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
