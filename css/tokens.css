@@ -123,6 +123,13 @@
   --ui-btn-secondary-text: var(--n-50);
   --ui-btn-secondary-border: var(--n-800);
 
+  --ui-hero-bg-start: rgb(18, 18, 18);
+  --ui-hero-bg-mid: rgb(52, 52, 52);
+  --ui-hero-bg-end: rgb(75, 75, 75);
+  --ui-hero-bg-overlay-start: rgba(0, 0, 0, 0.34);
+  --ui-hero-bg-overlay-mid: rgba(0, 0, 0, 0.08);
+  --ui-hero-bg-overlay-end: rgba(0, 0, 0, 0.22);
+
   --ui-input-bg: var(--bg-surface);
   --ui-input-text: var(--text);
   --ui-input-border: 1px solid var(--border);

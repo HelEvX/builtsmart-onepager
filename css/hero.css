@@ -90,7 +90,14 @@
 }
 
 .hero-product-dark {
-  background: linear-gradient(130deg, var(--n-900) 0%, var(--n-800) 62%, var(--n-700) 100%);
+  background:
+    linear-gradient(
+      45deg,
+      var(--ui-hero-bg-overlay-start) 0%,
+      var(--ui-hero-bg-overlay-mid) 56%,
+      var(--ui-hero-bg-overlay-end) 100%
+    ),
+    linear-gradient(45deg, var(--ui-hero-bg-start) 0%, var(--ui-hero-bg-mid) 52%, var(--ui-hero-bg-end) 100%);
   padding: 92px 0 84px;
 }
 
