@@ -49,3 +49,26 @@ Only spacing/layout rules are allowed outside `css/base.css`.
 - Pricing CTAs (`index.html`): secondary outlined
 
 If a new page introduces additional buttons, classify each one into one of the four variants before merging.
+
+## Typography System (source of truth)
+
+Typography is now token-driven from `css/tokens.css` and consumed in shared/component CSS.
+
+### Core type tokens
+
+- Body: `--ui-fs-body`, `--ui-lh-body`
+- Body variants: `--ui-fs-body-lg`, `--ui-fs-body-md`
+- Headings: `--ui-fs-h1` to `--ui-fs-h4`, `--ui-lh-h1` to `--ui-lh-h4`, `--ui-fw-h1` to `--ui-fw-h4`
+- Heading tracking: `--ui-tracking-heading`, `--ui-tracking-heading-wide`
+- Buttons: `--ui-fs-button` (used by `.btn`)
+
+Responsive typography scales through token overrides in `css/tokens.css` media queries. Avoid hard-coding heading/body/button sizes in component files unless there is a true one-off requirement.
+
+### Where typography is wired
+
+- Global body/headings/buttons: `css/base.css`
+- Section titles: `css/title.css`
+- Page heading banner: `css/page-heading.css`
+- Hero content: `css/hero.css`
+- FAQ + call-to-action text: `css/faq.css`, `css/call-to-action.css`
+- Pricing cards: `css/services.css`

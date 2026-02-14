@@ -1,13 +1,15 @@
 .sec-title {
-  max-width: 900px;
+  max-width: var(--ui-content-max);
   text-align: left;
   margin-bottom: 50px;
 }
 .sec-title h1 {
-  font-size: 36px;
+  font-size: var(--ui-fs-h2);
+  line-height: var(--ui-lh-h2);
   text-transform: uppercase;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: var(--ui-fw-h2);
+  letter-spacing: var(--ui-tracking-heading);
   font-family: var(--font-primary);
 }
 .sec-title span {
@@ -27,4 +29,6 @@
 }
 .sec-title p {
   margin-bottom: 20px;
+  font-size: var(--ui-fs-body);
+  line-height: var(--ui-lh-body);
 }

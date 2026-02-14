@@ -72,11 +72,11 @@
 html,
 body {
   height: 100%;
-  font-size: 16px;
+  font-size: var(--ui-fs-body);
   color: var(--text-color-secondary);
   font-family: var(--font-primary);
   vertical-align: baseline;
-  line-height: 26px;
+  line-height: var(--ui-lh-body);
 }
 a:focus {
   outline: 0px solid;
@@ -87,6 +87,8 @@ img {
 }
 p {
   margin: 0 0 20px;
+  font-size: var(--ui-fs-body);
+  line-height: var(--ui-lh-body);
 }
 h1,
 h2,
@@ -95,19 +97,30 @@ h4,
 h5,
 h6 {
   margin: 0 0 20px;
-  font-weight: 600;
+  font-weight: var(--ui-fw-h3);
   font-family: var(--font-primary);
   color: var(--primary-color);
+  letter-spacing: var(--ui-tracking-heading);
 }
 h1 {
-  font-size: 32px;
-  letter-spacing: 0.2rem;
+  font-size: var(--ui-fs-h1);
+  line-height: var(--ui-lh-h1);
+  font-weight: var(--ui-fw-h1);
 }
 h2 {
-  font-size: 18px;
+  font-size: var(--ui-fs-h2);
+  line-height: var(--ui-lh-h2);
+  font-weight: var(--ui-fw-h2);
 }
 h3 {
-  font-size: 16px;
+  font-size: var(--ui-fs-h3);
+  line-height: var(--ui-lh-h3);
+  font-weight: var(--ui-fw-h3);
+}
+h4 {
+  font-size: var(--ui-fs-h4);
+  line-height: var(--ui-lh-h4);
+  font-weight: var(--ui-fw-h4);
 }
 a {
   transition: all 0.5s ease-out;
@@ -164,6 +177,8 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-primary);
+  font-size: var(--ui-fs-button);
   font-weight: var(--ui-btn-font-weight);
   border-radius: var(--ui-btn-radius);
   letter-spacing: var(--ui-btn-tracking);

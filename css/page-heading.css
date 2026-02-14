@@ -8,10 +8,11 @@
   background-size: cover;
 }
 .page-heading h1 {
-  font-size: 40px;
+  font-size: var(--ui-fs-h1);
+  line-height: var(--ui-lh-h1);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
+  letter-spacing: var(--ui-tracking-heading-wide);
+  font-weight: var(--ui-fw-h1);
   color: var(--text-color-light);
 }

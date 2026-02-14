@@ -1,11 +1,13 @@
 .faq-title {
   color: var(--text-color-light);
-  font-size: 32px;
+  font-size: var(--ui-fs-h2);
+  line-height: var(--ui-lh-h2);
+  font-weight: var(--ui-fw-h2);
   margin-bottom: 24px;
 }
 
 .faq-sec {
-  max-width: 900px;
+  max-width: var(--ui-content-max);
   margin: 0;
 }
 
@@ -40,8 +42,8 @@
   background: transparent;
   text-align: left;
   color: var(--text-color-primary);
-  font-size: 19px;
-  line-height: 1.35;
+  font-size: var(--ui-fs-body-lg);
+  line-height: var(--ui-lh-body-lg);
   font-weight: 600;
   cursor: pointer;
 }
@@ -118,8 +120,8 @@
 
 .faq-panel-content p {
   margin: 0 0 12px;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: var(--ui-fs-body);
+  line-height: var(--ui-lh-body);
 }
 
 .faq-panel-content p:last-child {
@@ -133,8 +135,8 @@
 
 .faq-panel-content li {
   margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: var(--ui-fs-body);
+  line-height: var(--ui-lh-body);
 }
 
 .faq-panel-content li::marker {
@@ -153,7 +155,7 @@
 
 @media only screen and (max-width: 767px) {
   .faq-trigger {
-    font-size: 17px;
+    font-size: var(--ui-fs-body-md);
     padding: 14px 16px;
   }
 
