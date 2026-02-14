@@ -476,8 +476,10 @@ const initContactForm = () => {
       } catch (_) {
         try {
           await submitWithIframeFallback(form);
-          form.reset();
-          setFeedback("success", "Bedankt! Je bericht is verzonden.");
+          setFeedback(
+            "error",
+            "We konden je verzending niet bevestigen door een verbindingsprobleem. Controleer Netlify Forms of probeer opnieuw.",
+          );
         } catch (_) {
           setFeedback("error", "Verzenden lukt nu niet. Probeer opnieuw of mail naar info@builtsmart.be.");
         }
