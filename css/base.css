@@ -332,7 +332,7 @@ input:focus {
   z-index: 1;
 }
 .images-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.65) 100%);
   height: 100%;
   position: absolute;
   width: 100%;

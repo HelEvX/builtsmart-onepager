@@ -1,14 +1,21 @@
+.contact-page-sec {
+  background: var(--background-color-secondary);
+}
+
 .contact-info-icon {
   float: left;
   text-align: center;
 }
 .contact-page-sec .contact-field h2 {
   color: var(--primary-color);
-  font-size: 22px;
+  font-size: var(--ui-fs-h4);
+  line-height: var(--ui-lh-h4);
   font-weight: 700;
+  margin-bottom: 12px;
 }
 .contact-field .col-md-6.col-sm-6.col-xs-12 {
   padding-left: 0;
+  padding-right: 10px;
 }
 .contact-info-icon i {
   font-size: 30px;
@@ -16,12 +23,13 @@
 }
 .contact-info-text {
   padding-left: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 .contact-info-text h2 {
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 .contact-field .row {
   margin-left: 0;
@@ -34,67 +42,79 @@
   display: inline-block;
   width: 100%;
 }
-.contact-field input {
-  background: var(--text-color-light) none repeat scroll 0 0;
-  border: 1px solid var(--background-color-tertiary);
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 100%;
-  color: var(--text-color-subtle);
-}
+.contact-field input:not([type="submit"]):not([type="checkbox"]),
 .contact-field select {
-  width: 100%;
-  border: 1px solid var(--background-color-tertiary);
-  padding: 12px 20px;
+  background: var(--ui-surface-bg);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--ui-radius-sm);
   margin-bottom: 20px;
-  color: var(--text-color-subtle);
+  padding: 13px 14px;
+  width: 100%;
+  color: var(--text-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.contact-field input:not([type="submit"]):not([type="checkbox"]):focus,
+.contact-field select:focus,
+.single-input-field textarea:focus {
+  border-color: var(--secondary-color-darker);
+  box-shadow: var(--ui-focus-ring);
 }
 .contact-field .message-input {
   display: inline-block;
   width: 100%;
   padding-left: 0;
+  padding-right: 0;
 }
 .single-input-field textarea {
-  border: 1px solid var(--background-color-tertiary);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-bg);
   width: 100%;
-  height: 120px;
-  padding: 10px;
+  min-height: 150px;
+  padding: 13px 14px;
+  color: var(--text-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .single-input-fieldsbtn .btn {
-  padding: 14px 0;
-  width: 150px;
-  margin-top: 20px;
-  font-size: 16px;
+  padding: 14px 24px;
+  min-width: 190px;
+  margin-top: 16px;
+  font-size: var(--ui-fs-button);
 }
 .contact-field {
-  display: inline-block;
+  display: block;
   width: 100%;
+  background: var(--ui-surface-bg);
+  border: 1px solid var(--border-color-light);
+  box-shadow: 0 10px 24px var(--background-color-tertiary);
+  padding: 26px 24px 30px;
 }
 .single-input-field h4 {
   color: var(--text-color-primary);
   font-size: 14px;
 }
 .single-input-field {
-  display: inline-block;
+  display: block;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 16px;
 }
 .contact-page-map {
   width: 100%;
-  height: 350px;
-  margin-bottom: 70px;
+  min-height: 350px;
+  margin-bottom: 28px;
 }
 
 .map-consent {
   height: 100%;
-  border: 1px solid var(--background-color-tertiary);
-  background: var(--background-color-tertiary);
+  border: 1px solid var(--border-color-light);
+  background: var(--ui-surface-bg);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 24px;
+  padding: 28px;
   gap: 14px;
+  box-shadow: 0 10px 24px var(--background-color-tertiary);
 }
 
 .map-consent p {
@@ -107,25 +127,50 @@
 }
 
 .privacy-consent-wrap {
-  margin-top: 6px;
+  margin-top: 4px;
+  margin-bottom: 2px;
 }
 
 .privacy-consent-label {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
-  gap: 8px;
-  color: var(--text-color-subtle);
+  gap: 10px;
+  color: var(--text-color-primary);
   font-size: 14px;
   line-height: 1.55;
 }
 
 .privacy-consent-label input[type="checkbox"] {
-  width: auto;
-  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 3px;
   margin-bottom: 0;
+}
+
+.privacy-consent-copy {
+  display: inline;
 }
 
 .privacy-consent-label a {
   color: var(--link);
   text-decoration: underline;
+}
+
+.contact-info {
+  background: var(--ui-surface-bg);
+  border: 1px solid var(--border-color-light);
+  box-shadow: 0 10px 24px var(--background-color-tertiary);
+  padding: 18px 16px;
+  margin-bottom: 14px;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact-field {
+    margin-bottom: 24px;
+  }
+
+  .contact-field .col-md-6.col-sm-6.col-xs-12 {
+    padding-right: 0;
+  }
 }
