@@ -7,8 +7,46 @@ const normalizePath = (path) => {
 
 const PARTIAL_CACHE_PREFIX = "bs:partial:";
 const COOKIE_DISMISS_KEY = "bs:cookie-banner:dismissed";
+const STORAGE_KEYS = {
+  partials: "sessionStorage",
+  cookies: "localStorage",
+};
 
 const getPartialCacheKey = (includePath) => `${PARTIAL_CACHE_PREFIX}${includePath}`;
+
+const getStorage = (type) => {
+  try {
+    if (type === STORAGE_KEYS.partials && typeof window.sessionStorage !== "undefined") {
+      return window.sessionStorage;
+    }
+    if (type === STORAGE_KEYS.cookies && typeof window.localStorage !== "undefined") {
+      return window.localStorage;
+    }
+  } catch (_) {
+    return null;
+  }
+  return null;
+};
+
+const readStorage = (type, key) => {
+  const storage = getStorage(type);
+  if (!storage) return null;
+  try {
+    return storage.getItem(key);
+  } catch (_) {
+    return null;
+  }
+};
+
+const writeStorage = (type, key, value) => {
+  const storage = getStorage(type);
+  if (!storage) return;
+  try {
+    storage.setItem(key, value);
+  } catch (_) {
+    return;
+  }
+};
 
 const loadPartials = async () => {
   const partialNodes = document.querySelectorAll("[data-include]");
@@ -18,7 +56,7 @@ const loadPartials = async () => {
     if (!includePath) return;
 
     const cacheKey = getPartialCacheKey(includePath);
-    const cachedPartial = sessionStorage.getItem(cacheKey);
+    const cachedPartial = readStorage(STORAGE_KEYS.partials, cacheKey);
 
     if (cachedPartial) {
       node.outerHTML = cachedPartial;
@@ -29,7 +67,7 @@ const loadPartials = async () => {
       const response = await fetch(includePath, { cache: "force-cache" });
       if (!response.ok) return;
       const html = await response.text();
-      sessionStorage.setItem(cacheKey, html);
+      writeStorage(STORAGE_KEYS.partials, cacheKey, html);
       node.outerHTML = html;
     } catch (_) {
       return;
@@ -48,7 +86,7 @@ const refreshPartialsInBackground = async (includePaths = []) => {
       const response = await fetch(includePath, { cache: "default" });
       if (!response.ok) return;
       const html = await response.text();
-      sessionStorage.setItem(getPartialCacheKey(includePath), html);
+      writeStorage(STORAGE_KEYS.partials, getPartialCacheKey(includePath), html);
     } catch (_) {
       return;
     }
@@ -305,7 +343,7 @@ const initCookieBanner = () => {
   const banner = document.querySelector("[data-cookie-banner]");
   if (!banner) return;
 
-  const dismissed = localStorage.getItem(COOKIE_DISMISS_KEY) === "1";
+  const dismissed = readStorage(STORAGE_KEYS.cookies, COOKIE_DISMISS_KEY) === "1";
   if (dismissed) return;
 
   banner.hidden = false;
@@ -315,7 +353,7 @@ const initCookieBanner = () => {
   if (!dismissButton) return;
 
   dismissButton.addEventListener("click", () => {
-    localStorage.setItem(COOKIE_DISMISS_KEY, "1");
+    writeStorage(STORAGE_KEYS.cookies, COOKIE_DISMISS_KEY, "1");
     banner.classList.remove("is-visible");
     window.setTimeout(() => {
       banner.hidden = true;
@@ -477,6 +515,11 @@ const initContactForm = () => {
         setFeedback("success", "Bedankt! Je bericht is verzonden.");
       } catch (_) {
         setMailtoErrorFeedback();
+      } finally {
+        isSubmitting = false;
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
       }
     });
   });

@@ -6,3 +6,33 @@
 
 [build.processing.forms]
   enabled = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/privacybeleid.html"
+  to = "/privacybeleid/"
+  status = 301
+
+[[redirects]]
+  from = "/gebruiksvoorwaarden.html"
+  to = "/gebruiksvoorwaarden/"
+  status = 301
+
+[[redirects]]
+  from = "/cookiebeleid.html"
+  to = "/cookiebeleid/"
+  status = 301
+
+[[redirects]]
+  from = "/data-compliance.html"
+  to = "/data-compliance/"
+  status = 301
+
+[[redirects]]
+  from = "/bedankt.html"
+  to = "/bedankt/"
+  status = 301
