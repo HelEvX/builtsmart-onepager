@@ -69,16 +69,21 @@ const initMobileMenu = () => {
     toggleButton.className = "mobile-nav-toggle";
     toggleButton.setAttribute("aria-expanded", "false");
     toggleButton.setAttribute("aria-label", "Open menu");
-    toggleButton.innerHTML = '<i class="ri-menu-line" aria-hidden="true"></i>';
+    toggleButton.innerHTML = `
+      <span class="mobile-nav-icon mobile-nav-icon--menu" aria-hidden="true">
+        <i class="ri-menu-line" aria-hidden="true"></i>
+      </span>
+      <span class="mobile-nav-icon mobile-nav-icon--close" aria-hidden="true">
+        <i class="ri-close-line" aria-hidden="true"></i>
+      </span>
+    `;
     mobileContainer.appendChild(toggleButton);
 
     toggleButton.addEventListener("click", () => {
       const isOpen = menu.classList.toggle("is-open");
       toggleButton.setAttribute("aria-expanded", String(isOpen));
       toggleButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-      toggleButton.innerHTML = isOpen
-        ? '<i class="ri-close-line" aria-hidden="true"></i>'
-        : '<i class="ri-menu-line" aria-hidden="true"></i>';
+      toggleButton.classList.toggle("is-open", isOpen);
     });
   });
 };

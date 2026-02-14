@@ -82,7 +82,7 @@
     margin-top: 10px;
   }
   .sec-title {
-    text-align: center;
+    text-align: left;
     margin: 0 0 50px;
   }
   .service-item .col-md-4.col-sm-6:nth-child(2n + 1) {
@@ -118,6 +118,20 @@
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  .page-heading h1 {
+    word-break: normal;
+    overflow-wrap: normal;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+  }
+
   body {
     font-size: var(--ui-fs-body);
     line-height: var(--ui-lh-body);
@@ -164,7 +178,7 @@
     width: 100%;
   }
   .header-left {
-    text-align: center;
+    text-align: left;
   }
   .about-desc h1 {
     font-size: 32px;
@@ -192,24 +206,26 @@
     margin-bottom: 20px;
   }
   .pagehding-sec {
-    padding: 80px 0;
+    padding-top: 104px;
+    padding-bottom: 26px;
+    min-height: 156px;
   }
   .page-heading h1 {
     font-size: var(--ui-fs-h1);
-    text-align: center;
+    text-align: left;
   }
   .sec-title {
-    text-align: center;
+    text-align: left;
     margin: 0 0 50px;
   }
   .footer-sec .col-md-3.col-sm-6 {
     margin: 40px 0;
   }
   .footer-bottom-sec p {
-    text-align: center;
+    text-align: left;
   }
   .call-to-action-text {
-    text-align: center;
+    text-align: left;
   }
   .call-to-action-text .btn {
     float: none;
@@ -247,7 +263,7 @@
 }
 @media only screen and (min-width: 0px) and (max-width: 492px) {
   .header-left {
-    text-align: center;
+    text-align: left;
   }
   .header-left li {
     margin: 10px 0;

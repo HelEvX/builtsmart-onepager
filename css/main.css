@@ -24,19 +24,62 @@
   border: 1px solid var(--border-color-light);
   background: var(--text-color-light);
   color: var(--primary-color);
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   font-size: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.mobile-nav-icon {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.mobile-nav-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 1em;
+  line-height: 1;
+  text-align: center;
+  font-size: 22px;
+}
+
+.mobile-nav-icon--close {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.is-open .mobile-nav-icon--menu {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.is-open .mobile-nav-icon--close {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-nav-menu {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+    margin-left: auto;
+    min-height: 56px;
+    padding-right: 8px;
+  }
+
+  .mobile-nav-toggle {
+    margin: 0;
   }
 
   #main-menu {
@@ -51,6 +94,8 @@
   #main-menu ul {
     text-align: left;
     margin-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   #main-menu ul li {
@@ -59,6 +104,6 @@
   }
 
   #main-menu ul li a {
-    padding: 12px 0;
+    padding: 12px 10px;
   }
 }

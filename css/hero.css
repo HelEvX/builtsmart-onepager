@@ -187,10 +187,16 @@
 
 .hero-flow-card {
   min-height: 120px;
-  border: 1px solid var(--n-700);
-  background: linear-gradient(180deg, var(--n-700) 0%, var(--n-800) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--ui-radius-md);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(180deg, var(--ui-hero-bg-mid) 0%, var(--ui-hero-bg-start) 100%);
   color: var(--text-color-light);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,8 +207,12 @@
 }
 
 .hero-flow-card-approved {
-  border-color: var(--secondary-color-darker);
-  color: var(--secondary-color);
+  border-color: var(--brand-accent);
+  color: var(--text-color-light);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 0 0 1px rgba(234, 179, 8, 0.18);
 }
 
 .hero-flow-arrow {
@@ -236,6 +246,7 @@
 
   .hero-product-content h1 {
     font-size: var(--ui-fs-h1);
+    text-wrap: balance;
   }
 
   .hero-product-subtitle {

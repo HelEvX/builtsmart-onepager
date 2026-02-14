@@ -2,10 +2,17 @@
   background-image: url("../img/logo/seamless-pattern.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  padding-bottom: 50px;
-  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-top: 112px;
+  min-height: 180px;
   position: relative;
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.pagehding-sec .container {
+  width: 100%;
 }
 .page-heading h1 {
   font-size: var(--ui-fs-h1);

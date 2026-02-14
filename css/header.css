@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  box-sizing: border-box;
   z-index: 50;
   margin: 0;
   padding: 14px 24px 22px;
@@ -121,6 +122,10 @@
   background: var(--ui-surface-muted-bg);
 }
 
+.mobile-menu-contact {
+  display: none;
+}
+
 .site-header-cta {
   text-align: right;
 }
@@ -174,6 +179,39 @@
     padding: 10px 12px 16px;
   }
 
+  .site-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 60px;
+  }
+
+  .site-header-row > .col-md-3,
+  .site-header-row > .col-sm-5,
+  .site-header-row > .col-xs-8 {
+    width: auto;
+    float: none;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .site-header-row > .mobile-nav-menu {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .site-header-row > .header-nav-col {
+    order: 3;
+    width: 100%;
+    flex: 0 0 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 4px;
+  }
+
   .site-header .container {
     padding-left: 16px;
     padding-right: 16px;
@@ -198,6 +236,13 @@
     padding: 2px 0;
   }
 
+  .site-logo-wrap {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 6px 0;
+  }
+
   .site-logo-link img {
     width: 176px;
     height: 45px;
@@ -219,5 +264,34 @@
 
   .site-nav ul li + li {
     margin-top: 6px;
+  }
+
+  .mobile-menu-contact {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .site-nav ul li.mobile-menu-contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 44px;
+    padding: 12px 16px;
+    border: 1px solid var(--secondary-color-darker);
+    background: var(--ui-btn-primary-bg);
+    color: var(--ui-btn-primary-text);
+    font-weight: var(--ui-btn-font-weight);
+    letter-spacing: var(--ui-btn-tracking);
+    text-transform: uppercase;
+    box-shadow: var(--ui-btn-shadow);
+  }
+
+  .site-nav ul li.mobile-menu-contact a:hover,
+  .site-nav ul li.mobile-menu-contact a:focus-visible {
+    color: var(--ui-btn-primary-text);
+    background: var(--ui-btn-primary-bg-hover);
+    border-color: var(--secondary-color-darker);
+    box-shadow: var(--ui-btn-shadow-hover);
   }
 }

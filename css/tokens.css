@@ -136,28 +136,28 @@
   --ui-input-focus-ring: var(--ui-focus-ring);
 
   --ui-font-body: var(--font-sans);
-  --ui-fs-body: 16px;
+  --ui-fs-body: clamp(15px, 0.22vw + 14.2px, 17px);
   --ui-lh-body: 1.625;
   --ui-fw-body: var(--fw-400);
 
-  --ui-fs-body-lg: 19px;
+  --ui-fs-body-lg: clamp(17px, 0.35vw + 16px, 20px);
   --ui-lh-body-lg: 1.6;
-  --ui-fs-body-md: 17px;
+  --ui-fs-body-md: clamp(16px, 0.25vw + 15.2px, 18px);
   --ui-lh-body-md: 1.55;
 
-  --ui-fs-h1: 40px;
+  --ui-fs-h1: clamp(32px, 1.2vw + 27px, 40px);
   --ui-lh-h1: 1.2;
   --ui-fw-h1: var(--fw-700);
 
-  --ui-fs-h2: 34px;
+  --ui-fs-h2: clamp(28px, 0.9vw + 24px, 34px);
   --ui-lh-h2: 1.25;
   --ui-fw-h2: var(--fw-700);
 
-  --ui-fs-h3: 28px;
+  --ui-fs-h3: clamp(22px, 0.9vw + 18px, 28px);
   --ui-lh-h3: 1.3;
   --ui-fw-h3: var(--fw-700);
 
-  --ui-fs-h4: 24px;
+  --ui-fs-h4: clamp(19px, 0.75vw + 16px, 24px);
   --ui-lh-h4: 1.35;
   --ui-fw-h4: var(--fw-600);
 
@@ -177,26 +177,4 @@
   --ui-shadow-1: var(--shadow-1);
 
   --ui-content-max: 900px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  :root {
-    --ui-fs-body: 15px;
-    --ui-fs-h1: 36px;
-    --ui-fs-h2: 30px;
-    --ui-fs-h3: 24px;
-    --ui-fs-h4: 20px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --ui-fs-body: 14px;
-    --ui-fs-h1: 34px;
-    --ui-fs-h2: 28px;
-    --ui-fs-h3: 24px;
-    --ui-fs-h4: 20px;
-    --ui-fs-body-lg: 17px;
-    --ui-fs-body-md: 16px;
-  }
 }
