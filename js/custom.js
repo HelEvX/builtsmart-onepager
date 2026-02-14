@@ -472,44 +472,11 @@ const initContactForm = () => {
       }
 
       try {
-        const formData = new FormData(form);
-        const encodedData = new URLSearchParams();
-        formData.forEach((value, key) => {
-          encodedData.append(key, String(value));
-        });
-
-        if (!encodedData.has("form-name")) {
-          const formName = form.getAttribute("name") || "contact";
-          encodedData.set("form-name", formName);
-        }
-
-        const response = await fetch("/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: encodedData.toString(),
-        });
-
-        if (!response.ok) {
-          throw new Error("Form submission failed");
-        }
-
+        await submitWithIframeFallback(form);
         form.reset();
         setFeedback("success", "Bedankt! Je bericht is verzonden.");
       } catch (_) {
-        try {
-          await submitWithIframeFallback(form);
-          form.reset();
-          setFeedback("success", "Bedankt! Je bericht is verzonden.");
-        } catch (_) {
-          setMailtoErrorFeedback();
-        }
-      } finally {
-        isSubmitting = false;
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
+        setMailtoErrorFeedback();
       }
     });
   });
