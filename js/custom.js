@@ -356,9 +356,6 @@ const initContactForm = () => {
   const forms = document.querySelectorAll("form[data-contact-form]");
   if (!forms.length) return;
 
-  const isLocalDevHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-  if (!isLocalDevHost) return;
-
   forms.forEach((form) => {
     const submitButton = form.querySelector("input[type='submit'], button[type='submit']");
     const feedback = form.querySelector("[data-form-feedback]");
@@ -434,6 +431,8 @@ const initContactForm = () => {
 };
 
 const bootstrap = async () => {
+  initContactForm();
+
   const includePaths = await loadPartials();
   initMobileMenu();
   initFaqAccordion();
@@ -441,7 +440,6 @@ const bootstrap = async () => {
   initSponsorsBanner();
   initCookieBanner();
   initMapConsent();
-  initContactForm();
   refreshPartialsInBackground(includePaths);
 };
 
