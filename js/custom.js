@@ -402,7 +402,23 @@ const initContactForm = () => {
       }
 
       try {
-        await new Promise((resolve) => window.setTimeout(resolve, 220));
+        const formData = new FormData(form);
+        const encodedData = new URLSearchParams();
+        formData.forEach((value, key) => {
+          encodedData.append(key, String(value));
+        });
+
+        const response = await fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: encodedData.toString(),
+        });
+
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
 
         form.reset();
         setFeedback("success", "Bedankt! Je bericht is verzonden.");
