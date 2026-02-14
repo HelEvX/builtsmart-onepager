@@ -478,7 +478,7 @@ const initContactForm = () => {
           encodedData.append(key, String(value));
         });
 
-        const submitEndpoint = form.getAttribute("action") || window.location.pathname || "/";
+        const submitEndpoint = window.location.pathname || "/contact.html";
         const response = await fetch(submitEndpoint, {
           method: "POST",
           headers: {
