@@ -13,9 +13,6 @@
   .slider-text h1 {
     font-size: 48px;
   }
-  .appointment-button a {
-    padding: 12px 14px;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
@@ -62,6 +59,12 @@
   .main-menu {
     text-align: center;
   }
+  .site-header .main-menu {
+    text-align: right;
+  }
+  .site-header .main-menu ul li a {
+    padding: 14px 8px;
+  }
   .slider-text {
     width: 767px;
   }
@@ -70,6 +73,10 @@
   }
   .main-menu ul ul {
     top: 92px;
+  }
+  .site-header .main-menu ul ul {
+    top: 100%;
+    margin-top: 10px;
   }
   .sec-title {
     text-align: center;
@@ -145,9 +152,6 @@
   .pb-70 {
     padding-top: 40px;
   }
-  .appointment-button {
-    display: none;
-  }
   .slider-text p {
     width: 100%;
   }
@@ -199,7 +203,7 @@
   .call-to-action-text {
     text-align: center;
   }
-  .call-to-action-text a.btn {
+  .call-to-action-text .btn {
     float: none;
     margin-top: 20px;
   }

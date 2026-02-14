@@ -1,125 +1,223 @@
-.header-top {
-  background: var(--primary-color-darker);
-  border-bottom: 1px solid var(--border-color-primary);
-  text-align: right;
-}
-.header-left ul {
-  display: inline-block;
-}
-.header-left li {
-  position: relative;
-  display: inline-block;
-  color: var(--text-color-light);
-  padding: 14px;
-  border-left: 1px solid var(--border-color-primary);
-}
-.header-left li:last-child {
-  border-right: 1px solid var(--border-color-primary);
-}
-.header-left li i {
-  color: var(--text-color-light);
-  margin-right: 10px;
-}
-/*
-4.Menu  Section
-=================*/
-.logo {
-  padding: 20px 0;
-}
-.menu {
-  display: inline-block;
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 50;
+  margin: 0;
+  padding: 14px 24px 22px;
+  background: transparent;
 }
-.main-menu {
-  display: inline-block;
-  text-align: right;
+
+.site-header .container {
+  width: 100%;
+  max-width: none;
+  padding-left: 28px;
+  padding-right: 28px;
 }
-.main-menu ul {
+
+.site-header-shell {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  background: var(--n-50);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--ui-radius-lg);
+  box-shadow:
+    var(--ui-shadow-1),
+    0 10px 26px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.site-header-meta {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.site-header-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  position: relative;
+  color: var(--text-color-secondary);
+  font-size: 13px;
+  line-height: 1.2;
 }
-.main-menu ul li {
-  display: inline-block;
-  padding: 0;
-  position: relative;
+
+.site-header-info-right {
+  justify-content: flex-end;
 }
-.main-menu ul li a {
-  color: var(--primary-color);
+
+.site-header-info li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-header-row {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo-wrap {
+  padding: 14px 0;
+}
+
+.site-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  min-width: 220px;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-logo-link img {
   display: block;
-  padding: 40px 14px;
-  text-decoration: none;
-  transition: all 0.4s ease 0s;
-  position: relative;
-  font-weight: 600;
-}
-.main-menu ul li ul:hover .main-menu ul li a {
-  background: var(--border-color-extra-light);
-}
-.main-menu ul li a:hover {
-  transition: all 0.4s 0s ease;
-  color: var(--primary-color);
-}
-.main-menu ul ul {
-  background: var(--primary-color) none repeat scroll 0 0;
-  left: 12px;
-  opacity: 0;
-  position: absolute;
-  text-align: left;
-  top: 106px;
-  transition: all 0.4s ease 0s;
-  visibility: hidden;
-  z-index: 99999;
-  transition: all 0.3s ease 0s;
-  border-top: 1px solid var(--secondary-color);
-}
-.main-menu ul ul li {
-  float: none;
   width: 220px;
+  height: 56px;
+  max-width: none;
+  max-height: none;
+  filter: none;
 }
-.main-menu ul ul li a {
-  line-height: 120%;
-  padding: 10px 20px;
-  color: var(--text-color-light);
-  border-bottom: 1px solid var(--border-color-secondary);
-}
-.main-menu ul ul li:last-child a {
-  border-bottom: 0;
-}
-.main-menu ul ul li a:hover {
-  color: var(--primary-color);
-  background: var(--text-color-light);
-}
-.main-menu ul ul ul {
-  top: 0;
-  left: 100%;
-}
-.main-menu ul li:hover ul {
-  visibility: visible;
-  transition: all 0.4s ease 0s;
-  opacity: 1;
-}
-.main-menu ul li a i {
-  margin-left: 6px;
-  font-size: 14px;
-}
-.appointment-button {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 28px 0;
-  display: inline-block;
-  width: 100%;
+
+.header-nav-col {
   text-align: right;
 }
-.appointment-button a {
-  padding: 12px 26px;
-  display: inline-block;
-  font-size: 15px;
-  width: 100%;
-  text-align: center;
+
+.site-nav {
+  display: block;
 }
-.appointment-button a:hover {
-  color: var(--ui-btn-primary-text);
+
+.site-nav ul {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-/*header top bottom*/
+
+.site-nav ul li a {
+  display: block;
+  padding: 11px 14px;
+  border-radius: var(--ui-radius-sm);
+  color: var(--text-color-secondary);
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid transparent;
+}
+
+.site-nav ul li a:hover,
+.site-nav ul li a:focus-visible {
+  color: var(--text-color-primary);
+  border-color: var(--border-color-light);
+  background: var(--ui-surface-muted-bg);
+}
+
+.site-header-cta {
+  text-align: right;
+}
+
+.site-header-cta .btn {
+  min-width: 112px;
+}
+
+@media only screen and (max-width: 991px) {
+  .site-header-row {
+    display: block;
+  }
+
+  .site-header-meta {
+    padding: 8px 0;
+  }
+
+  .site-header-info {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .site-header-info-right {
+    justify-content: center;
+  }
+
+  .site-logo-wrap {
+    text-align: left;
+    padding: 12px 0;
+  }
+
+  .header-nav-col {
+    text-align: left;
+  }
+
+  .site-nav {
+    width: 100%;
+  }
+
+  .site-nav ul {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 0 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .site-header {
+    padding: 10px 12px 16px;
+  }
+
+  .site-header .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header-shell {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .site-header-meta {
+    display: none;
+  }
+
+  .site-header-shell {
+    border-radius: var(--ui-radius-sm);
+  }
+
+  .site-logo-link {
+    min-height: 48px;
+    min-width: 176px;
+    padding: 2px 0;
+  }
+
+  .site-logo-link img {
+    width: 176px;
+    height: 45px;
+  }
+
+  #main-menu {
+    display: none;
+    width: 100%;
+  }
+
+  #main-menu.is-open {
+    display: block;
+  }
+
+  .site-nav ul {
+    display: block;
+    padding: 6px 0 12px;
+  }
+
+  .site-nav ul li + li {
+    margin-top: 6px;
+  }
+}

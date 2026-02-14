@@ -121,38 +121,45 @@ a:hover {
   text-decoration: none;
 }
 
-.btn,
-.appointment-button a,
-.call-to-action-text a.btn,
-.faq-banner-btn,
-.btn.price_btn,
-.single-input-fieldsbtn input[type="submit"] {
+.btn {
   --btn-fill-bg: var(--ui-btn-primary-bg);
   --btn-fill-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-fill-bg-active: var(--ui-btn-primary-bg-hover);
   --btn-fill-text: var(--ui-btn-primary-text);
   --btn-fill-text-hover: var(--ui-btn-primary-text);
+  --btn-fill-text-active: var(--ui-btn-primary-text);
   --btn-fill-border: var(--secondary-color-darker);
   --btn-fill-border-hover: var(--secondary-color-darker);
+  --btn-fill-border-active: var(--secondary-color-darker);
   --btn-fill-shadow: var(--ui-btn-shadow);
   --btn-fill-shadow-hover: var(--ui-btn-shadow-hover);
+  --btn-fill-shadow-active: var(--ui-btn-shadow-hover);
 
   --btn-outline-bg: transparent;
   --btn-outline-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-outline-bg-active: var(--ui-btn-primary-bg-hover);
   --btn-outline-text: var(--primary-color);
   --btn-outline-text-hover: var(--ui-btn-primary-text);
+  --btn-outline-text-active: var(--ui-btn-primary-text);
   --btn-outline-border: var(--secondary-color-darker);
   --btn-outline-border-hover: var(--secondary-color-darker);
+  --btn-outline-border-active: var(--secondary-color-darker);
   --btn-outline-shadow: none;
   --btn-outline-shadow-hover: var(--ui-btn-shadow-hover);
+  --btn-outline-shadow-active: var(--ui-btn-shadow-hover);
 
   --btn-bg: var(--btn-fill-bg);
   --btn-bg-hover: var(--btn-fill-bg-hover);
+  --btn-bg-active: var(--btn-fill-bg-active);
   --btn-text: var(--btn-fill-text);
   --btn-text-hover: var(--btn-fill-text-hover);
+  --btn-text-active: var(--btn-fill-text-active);
   --btn-border: var(--btn-fill-border);
   --btn-border-hover: var(--btn-fill-border-hover);
+  --btn-border-active: var(--btn-fill-border-active);
   --btn-shadow: var(--btn-fill-shadow);
   --btn-shadow-hover: var(--btn-fill-shadow-hover);
+  --btn-shadow-active: var(--btn-fill-shadow-active);
 
   display: inline-flex;
   align-items: center;
@@ -175,12 +182,7 @@ a:hover {
     transform 0.15s ease;
 }
 
-.btn:hover,
-.appointment-button a:hover,
-.call-to-action-text a.btn:hover,
-.faq-banner-btn:hover,
-.btn.price_btn:hover,
-.single-input-fieldsbtn input[type="submit"]:hover {
+.btn:hover {
   background: var(--btn-bg-hover);
   color: var(--btn-text-hover);
   border-color: var(--btn-border-hover);
@@ -188,12 +190,7 @@ a:hover {
   transform: translateY(-1px);
 }
 
-.btn:focus-visible,
-.appointment-button a:focus-visible,
-.call-to-action-text a.btn:focus-visible,
-.faq-banner-btn:focus-visible,
-.btn.price_btn:focus-visible,
-.single-input-fieldsbtn input[type="submit"]:focus-visible {
+.btn:focus-visible {
   outline: none;
   box-shadow: var(--ui-focus-ring);
 }
@@ -201,52 +198,79 @@ a:hover {
 .btn--primary {
   --btn-fill-bg: var(--ui-btn-primary-bg);
   --btn-fill-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-fill-bg-active: var(--ui-btn-primary-bg-hover);
   --btn-fill-text: var(--ui-btn-primary-text);
   --btn-fill-text-hover: var(--ui-btn-primary-text);
+  --btn-fill-text-active: var(--ui-btn-primary-text);
   --btn-fill-border: var(--secondary-color-darker);
   --btn-fill-border-hover: var(--secondary-color-darker);
+  --btn-fill-border-active: var(--secondary-color-darker);
 
   --btn-outline-text: var(--primary-color);
   --btn-outline-text-hover: var(--ui-btn-primary-text);
+  --btn-outline-text-active: var(--ui-btn-primary-text);
   --btn-outline-border: var(--secondary-color-darker);
   --btn-outline-border-hover: var(--secondary-color-darker);
+  --btn-outline-border-active: var(--secondary-color-darker);
 }
 
 .btn--secondary {
   --btn-fill-bg: var(--ui-btn-secondary-bg);
   --btn-fill-bg-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-fill-bg-active: var(--ui-btn-secondary-bg-hover);
   --btn-fill-text: var(--ui-btn-secondary-text);
   --btn-fill-text-hover: var(--ui-btn-secondary-text);
+  --btn-fill-text-active: var(--ui-btn-secondary-text);
   --btn-fill-border: var(--ui-btn-secondary-border);
   --btn-fill-border-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-fill-border-active: var(--ui-btn-secondary-bg-hover);
 
   --btn-outline-text: var(--ui-btn-secondary-bg);
   --btn-outline-text-hover: var(--ui-btn-secondary-text);
+  --btn-outline-text-active: var(--ui-btn-secondary-text);
   --btn-outline-border: var(--ui-btn-secondary-border);
   --btn-outline-border-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-outline-border-active: var(--ui-btn-secondary-bg-hover);
   --btn-outline-bg-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-outline-bg-active: var(--ui-btn-secondary-bg-hover);
 }
 
 .btn--filled {
   --btn-bg: var(--btn-fill-bg);
   --btn-bg-hover: var(--btn-fill-bg-hover);
+  --btn-bg-active: var(--btn-fill-bg-active);
   --btn-text: var(--btn-fill-text);
   --btn-text-hover: var(--btn-fill-text-hover);
+  --btn-text-active: var(--btn-fill-text-active);
   --btn-border: var(--btn-fill-border);
   --btn-border-hover: var(--btn-fill-border-hover);
+  --btn-border-active: var(--btn-fill-border-active);
   --btn-shadow: var(--btn-fill-shadow);
   --btn-shadow-hover: var(--btn-fill-shadow-hover);
+  --btn-shadow-active: var(--btn-fill-shadow-active);
 }
 
-.btn--outline {
+.btn--outlined {
   --btn-bg: var(--btn-outline-bg);
   --btn-bg-hover: var(--btn-outline-bg-hover);
+  --btn-bg-active: var(--btn-outline-bg-active);
   --btn-text: var(--btn-outline-text);
   --btn-text-hover: var(--btn-outline-text-hover);
+  --btn-text-active: var(--btn-outline-text-active);
   --btn-border: var(--btn-outline-border);
   --btn-border-hover: var(--btn-outline-border-hover);
+  --btn-border-active: var(--btn-outline-border-active);
   --btn-shadow: var(--btn-outline-shadow);
   --btn-shadow-hover: var(--btn-outline-shadow-hover);
+  --btn-shadow-active: var(--btn-outline-shadow-active);
+}
+
+.btn:active {
+  background: var(--btn-bg-active);
+  color: var(--btn-text-active);
+  border-color: var(--btn-border-active);
+  box-shadow: var(--btn-shadow-active);
+  transform: translateY(0);
 }
 
 .btn--disabled,

@@ -60,14 +60,11 @@
   height: 120px;
   padding: 10px;
 }
-.single-input-fieldsbtn input[type="submit"] {
+.single-input-fieldsbtn .btn {
   padding: 14px 0;
   width: 150px;
   margin-top: 20px;
   font-size: 16px;
-}
-.single-input-fieldsbtn input[type="submit"]:hover {
-  color: var(--ui-btn-primary-text);
 }
 .contact-field {
   display: inline-block;

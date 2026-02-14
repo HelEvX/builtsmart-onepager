@@ -5,17 +5,49 @@ const normalizePath = (path) => {
   return clean === "/index.html" ? "/" : clean;
 };
 
+const PARTIAL_CACHE_PREFIX = "bs:partial:";
+
+const getPartialCacheKey = (includePath) => `${PARTIAL_CACHE_PREFIX}${includePath}`;
+
 const loadPartials = async () => {
   const partialNodes = document.querySelectorAll("[data-include]");
+  const includePaths = [...new Set([...partialNodes].map((node) => node.getAttribute("data-include")).filter(Boolean))];
   const tasks = [...partialNodes].map(async (node) => {
     const includePath = node.getAttribute("data-include");
     if (!includePath) return;
 
+    const cacheKey = getPartialCacheKey(includePath);
+    const cachedPartial = sessionStorage.getItem(cacheKey);
+
+    if (cachedPartial) {
+      node.outerHTML = cachedPartial;
+      return;
+    }
+
     try {
-      const response = await fetch(includePath, { cache: "no-store" });
+      const response = await fetch(includePath, { cache: "force-cache" });
       if (!response.ok) return;
       const html = await response.text();
+      sessionStorage.setItem(cacheKey, html);
       node.outerHTML = html;
+    } catch (_) {
+      return;
+    }
+  });
+
+  await Promise.all(tasks);
+  return includePaths;
+};
+
+const refreshPartialsInBackground = async (includePaths = []) => {
+  if (!includePaths.length) return;
+
+  const tasks = includePaths.map(async (includePath) => {
+    try {
+      const response = await fetch(includePath, { cache: "default" });
+      if (!response.ok) return;
+      const html = await response.text();
+      sessionStorage.setItem(getPartialCacheKey(includePath), html);
     } catch (_) {
       return;
     }
@@ -264,9 +296,10 @@ const initSponsorsBanner = () => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await loadPartials();
+  const includePaths = await loadPartials();
   initMobileMenu();
   initFaqAccordion();
   initSmoothScroll();
   initSponsorsBanner();
+  refreshPartialsInBackground(includePaths);
 });

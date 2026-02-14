@@ -32,13 +32,10 @@
   font-size: 30px;
   font-weight: bold;
 }
-.call-to-action-text a.btn {
+.call-to-action-text .btn {
   float: right;
   padding: 14px 36px;
   margin-top: 10px;
-}
-.call-to-action-text a.btn:hover {
-  color: var(--ui-btn-primary-text);
 }
 
 .faq-banner-sec {
@@ -92,10 +89,6 @@
   font-size: 14px;
   padding: 14px 24px;
   white-space: nowrap;
-}
-
-.faq-banner-btn:hover {
-  color: var(--ui-btn-primary-text);
 }
 
 @media only screen and (max-width: 991px) {

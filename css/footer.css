@@ -1,92 +1,80 @@
 footer.footer {
-  background: var(--primary-color) none repeat scroll 0 0;
+  background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-darkest) 100%);
 }
 .footer-sec {
-  padding-top: 100px;
+  padding-top: 88px;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 44px;
 }
 .footer-sec h2 {
   color: var(--text-color-light);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   position: relative;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
 }
 .footer-sec p {
-  color: var(--text-color-light);
+  color: var(--n-200);
 }
 .footer-widget-one img {
   margin-bottom: 20px;
-  margin-top: -30px;
-}
-.footer-widget-one i:hover {
-  background: var(--primary-color);
-  color: var(--text-color-light);
-  border-color: var(--primary-color);
-  transition: all 0.4s ease-in-out 0s;
-}
-.footer-widget-one ul {
-  margin-top: 15px;
-}
-.footer-widget-one form {
-  background: var(--primary-color-lighter) none repeat scroll 0 0;
-  margin-top: 35px;
-  position: relative;
-}
-.footer-widget-one input[type="email"] {
-  background: var(--text-color-light) none repeat scroll 0 0;
-  border: 1px solid var(--text-color-light);
-  color: var(--text-color-primary);
-  padding: 10px 58px 10px 10px;
-  width: 100%;
-}
-.footer-widget-one button {
-  background: var(--secondary-color) none repeat scroll 0 0;
-  color: var(--text-color-light);
-  padding: 11px 20px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.footer-widget-one button i {
-  border: none;
-  margin-right: 0;
-  color: var(--text-color-light);
+  margin-top: 0;
+  max-width: 180px;
 }
 .footer-widget-menu li:before {
   content: "›";
   left: 0px;
   top: 0px;
   position: relative;
-  color: var(--text-color-light);
+  color: var(--brand-metal-start);
   padding-right: 10px;
 }
 .footer-widget-menu li {
   position: relative;
+  margin-bottom: 6px;
 }
 .footer-widget-menu li a {
-  color: var(--border-color-light);
-  padding-bottom: 10px;
+  color: var(--n-200);
+  padding-bottom: 6px;
   display: inline-block;
 }
 .footer-widget-menu li a:hover {
-  color: var(--secondary-color);
+  color: var(--text-color-light);
   transition: all 0.4s ease 0s;
 }
+.footer-widget-menu li a[aria-disabled="true"] {
+  color: var(--n-400);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.footer-meta {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--n-400);
+}
+
 .footer-bottom-sec {
   padding: 15px 0;
-  background: var(--background-color-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.24);
 }
 .copy-right {
   margin-top: 8px;
 }
 .footer-bottom-sec p {
-  color: var(--border-color-light);
+  color: var(--n-200);
   margin: 0;
   text-align: left;
 }
-.copy-right span,
-.copy-right span a {
-  color: var(--secondary-color);
+
+.footer-bottom-note {
+  margin-top: 8px;
+}
+
+.footer-bottom-note p {
+  text-align: right;
+  color: var(--n-400);
 }
