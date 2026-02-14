@@ -478,11 +478,15 @@ const initContactForm = () => {
           encodedData.append(key, String(value));
         });
 
-        const submitEndpoint = window.location.pathname || "/contact.html";
-        const response = await fetch(submitEndpoint, {
+        if (!encodedData.has("form-name")) {
+          const formName = form.getAttribute("name") || "contact";
+          encodedData.set("form-name", formName);
+        }
+
+        const response = await fetch("/", {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
           },
           body: encodedData.toString(),
         });
