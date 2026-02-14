@@ -137,6 +137,10 @@
   line-height: 1.6;
 }
 
+.faq-panel-content li::marker {
+  color: var(--brand-metal-start);
+}
+
 .faq-panel-content li:last-child {
   margin-bottom: 0;
 }

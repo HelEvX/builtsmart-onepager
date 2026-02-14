@@ -127,6 +127,33 @@ a:hover {
 .faq-banner-btn,
 .btn.price_btn,
 .single-input-fieldsbtn input[type="submit"] {
+  --btn-fill-bg: var(--ui-btn-primary-bg);
+  --btn-fill-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-fill-text: var(--ui-btn-primary-text);
+  --btn-fill-text-hover: var(--ui-btn-primary-text);
+  --btn-fill-border: var(--secondary-color-darker);
+  --btn-fill-border-hover: var(--secondary-color-darker);
+  --btn-fill-shadow: var(--ui-btn-shadow);
+  --btn-fill-shadow-hover: var(--ui-btn-shadow-hover);
+
+  --btn-outline-bg: transparent;
+  --btn-outline-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-outline-text: var(--primary-color);
+  --btn-outline-text-hover: var(--ui-btn-primary-text);
+  --btn-outline-border: var(--secondary-color-darker);
+  --btn-outline-border-hover: var(--secondary-color-darker);
+  --btn-outline-shadow: none;
+  --btn-outline-shadow-hover: var(--ui-btn-shadow-hover);
+
+  --btn-bg: var(--btn-fill-bg);
+  --btn-bg-hover: var(--btn-fill-bg-hover);
+  --btn-text: var(--btn-fill-text);
+  --btn-text-hover: var(--btn-fill-text-hover);
+  --btn-border: var(--btn-fill-border);
+  --btn-border-hover: var(--btn-fill-border-hover);
+  --btn-shadow: var(--btn-fill-shadow);
+  --btn-shadow-hover: var(--btn-fill-shadow-hover);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -136,12 +163,14 @@ a:hover {
   line-height: var(--ui-btn-line-height);
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid var(--secondary-color-darker);
-  background: var(--ui-btn-primary-bg);
-  color: var(--ui-btn-primary-text);
-  box-shadow: var(--ui-btn-shadow);
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  box-shadow: var(--btn-shadow);
   transition:
     background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
     box-shadow 0.25s ease,
     transform 0.15s ease;
 }
@@ -152,9 +181,10 @@ a:hover {
 .faq-banner-btn:hover,
 .btn.price_btn:hover,
 .single-input-fieldsbtn input[type="submit"]:hover {
-  background: var(--ui-btn-primary-bg-hover);
-  color: var(--ui-btn-primary-text);
-  box-shadow: var(--ui-btn-shadow-hover);
+  background: var(--btn-bg-hover);
+  color: var(--btn-text-hover);
+  border-color: var(--btn-border-hover);
+  box-shadow: var(--btn-shadow-hover);
   transform: translateY(-1px);
 }
 
@@ -166,6 +196,73 @@ a:hover {
 .single-input-fieldsbtn input[type="submit"]:focus-visible {
   outline: none;
   box-shadow: var(--ui-focus-ring);
+}
+
+.btn--primary {
+  --btn-fill-bg: var(--ui-btn-primary-bg);
+  --btn-fill-bg-hover: var(--ui-btn-primary-bg-hover);
+  --btn-fill-text: var(--ui-btn-primary-text);
+  --btn-fill-text-hover: var(--ui-btn-primary-text);
+  --btn-fill-border: var(--secondary-color-darker);
+  --btn-fill-border-hover: var(--secondary-color-darker);
+
+  --btn-outline-text: var(--primary-color);
+  --btn-outline-text-hover: var(--ui-btn-primary-text);
+  --btn-outline-border: var(--secondary-color-darker);
+  --btn-outline-border-hover: var(--secondary-color-darker);
+}
+
+.btn--secondary {
+  --btn-fill-bg: var(--ui-btn-secondary-bg);
+  --btn-fill-bg-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-fill-text: var(--ui-btn-secondary-text);
+  --btn-fill-text-hover: var(--ui-btn-secondary-text);
+  --btn-fill-border: var(--ui-btn-secondary-border);
+  --btn-fill-border-hover: var(--ui-btn-secondary-bg-hover);
+
+  --btn-outline-text: var(--ui-btn-secondary-bg);
+  --btn-outline-text-hover: var(--ui-btn-secondary-text);
+  --btn-outline-border: var(--ui-btn-secondary-border);
+  --btn-outline-border-hover: var(--ui-btn-secondary-bg-hover);
+  --btn-outline-bg-hover: var(--ui-btn-secondary-bg-hover);
+}
+
+.btn--filled {
+  --btn-bg: var(--btn-fill-bg);
+  --btn-bg-hover: var(--btn-fill-bg-hover);
+  --btn-text: var(--btn-fill-text);
+  --btn-text-hover: var(--btn-fill-text-hover);
+  --btn-border: var(--btn-fill-border);
+  --btn-border-hover: var(--btn-fill-border-hover);
+  --btn-shadow: var(--btn-fill-shadow);
+  --btn-shadow-hover: var(--btn-fill-shadow-hover);
+}
+
+.btn--outline {
+  --btn-bg: var(--btn-outline-bg);
+  --btn-bg-hover: var(--btn-outline-bg-hover);
+  --btn-text: var(--btn-outline-text);
+  --btn-text-hover: var(--btn-outline-text-hover);
+  --btn-border: var(--btn-outline-border);
+  --btn-border-hover: var(--btn-outline-border-hover);
+  --btn-shadow: var(--btn-outline-shadow);
+  --btn-shadow-hover: var(--btn-outline-shadow-hover);
+}
+
+.btn--disabled,
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  --btn-bg: var(--ui-surface-muted-bg);
+  --btn-bg-hover: var(--ui-surface-muted-bg);
+  --btn-text: var(--text-color-secondary);
+  --btn-text-hover: var(--text-color-secondary);
+  --btn-border: var(--border-color-light);
+  --btn-border-hover: var(--border-color-light);
+  --btn-shadow: none;
+  --btn-shadow-hover: none;
+  opacity: 0.65;
+  pointer-events: none;
+  transform: none;
 }
 
 ul {
